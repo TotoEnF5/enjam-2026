@@ -1,6 +1,8 @@
 extends Node3D
 
 
+var inventory_index: int
+
 @onready var _mesh = $MeshInstance3D
 @onready var _static_body = $StaticBody3D
 

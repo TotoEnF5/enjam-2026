@@ -10,7 +10,7 @@ resource_local_to_scene = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_qno7i"]
 size = Vector3(1.0096436, 1.0036011, 0.9998779)
 
-[node name="Object" unique_id=245253461 instance=ExtResource("1_qno7i")]
+[node name="TestObject" unique_id=245253461 instance=ExtResource("1_qno7i")]
 
 [node name="MeshInstance3D" parent="." index="0" unique_id=356192535]
 mesh = SubResource("PrismMesh_qno7i")

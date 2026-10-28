@@ -1,6 +1,7 @@
 extends Node3D
 
 
+@export var inventory: Control
 @export var camera: Camera3D
 @export var raycast_length: float = 1000
 
@@ -49,11 +50,13 @@ func _input(event: InputEvent) -> void:
 					_current_object.position = _targeted_snapper.position
 					_current_object.untake()
 					_current_object = null
+					_targeted_snapper = null
 
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if _current_object == null:
 				return
 
+			inventory.untake_item(_current_object.inventory_index)
 			_current_object.queue_free()
 			_current_object = null
 

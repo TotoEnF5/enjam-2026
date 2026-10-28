@@ -6,7 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://tl12l6wootjk" path="res://scenes/object_mover.tscn" id="4_bwc8c"]
 [ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/hud.tscn" id="5_mhx8p"]
 [ext_resource type="PackedScene" uid="uid://c5d572kpuau7p" path="res://scenes/inventory.tscn" id="6_65la3"]
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="7_65la3"]
 [ext_resource type="PackedScene" uid="uid://x2uulteh23mo" path="res://scenes/placeable_objects/test_object.tscn" id="7_ptc3g"]
+[ext_resource type="Texture2D" uid="uid://bejw24p2403cp" path="res://assets/textures/baltrou.jpg" id="8_qcuhb"]
+[ext_resource type="Texture2D" uid="uid://phnpttckoywi" path="res://assets/textures/spon.jpg" id="10_7685u"]
+[ext_resource type="Texture2D" uid="uid://b2uiqldjery75" path="res://assets/textures/wilson.jpg" id="11_3853c"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c6agx"]
 size = Vector2(5, 5)
@@ -16,6 +20,30 @@ albedo_texture = ExtResource("1_f74lx")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tyffc"]
 size = Vector2(5, 5)
+
+[sub_resource type="Resource" id="Resource_hj2ta"]
+script = ExtResource("7_65la3")
+inventory_image = ExtResource("8_qcuhb")
+placeable_object = ExtResource("7_ptc3g")
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
+
+[sub_resource type="Resource" id="Resource_f74lx"]
+script = ExtResource("7_65la3")
+inventory_image = ExtResource("1_f74lx")
+placeable_object = ExtResource("7_ptc3g")
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
+
+[sub_resource type="Resource" id="Resource_ptc3g"]
+script = ExtResource("7_65la3")
+inventory_image = ExtResource("10_7685u")
+placeable_object = ExtResource("7_ptc3g")
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
+
+[sub_resource type="Resource" id="Resource_wcu0q"]
+script = ExtResource("7_65la3")
+inventory_image = ExtResource("11_3853c")
+placeable_object = ExtResource("7_ptc3g")
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
 
 [node name="House" type="Node3D" unique_id=53535480]
 script = ExtResource("1_ptc3g")
@@ -55,7 +83,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.626677, 0.5791967, 0.65559
 [node name="SnapPoint2" parent="Snappers" unique_id=1993417590 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6933775, 0.5791967, -0.778409)
 
-[node name="ObjectMover" parent="." unique_id=1059546158 node_paths=PackedStringArray("camera") instance=ExtResource("4_bwc8c")]
+[node name="ObjectMover" parent="." unique_id=1059546158 node_paths=PackedStringArray("inventory", "camera") instance=ExtResource("4_bwc8c")]
+inventory = NodePath("../CanvasLayer/Inventory")
 camera = NodePath("../Camera3D")
 
 [node name="Objects" type="Node3D" parent="." unique_id=597314233]
@@ -76,6 +105,6 @@ anchors_preset = 7
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
-items = Array[PackedScene]([ExtResource("7_ptc3g"), ExtResource("7_ptc3g"), ExtResource("7_ptc3g"), ExtResource("7_ptc3g")])
+items = Array[ExtResource("7_65la3")]([SubResource("Resource_hj2ta"), SubResource("Resource_f74lx"), SubResource("Resource_ptc3g"), SubResource("Resource_wcu0q")])
 
 [connection signal="item_selected" from="CanvasLayer/Inventory" to="." method="_on_inventory_item_selected"]
