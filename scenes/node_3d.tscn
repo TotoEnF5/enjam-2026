@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bfo16nbywca6i"]
+
+[ext_resource type="PackedScene" uid="uid://vbyabsc1c8un" path="res://scenes/camera.tscn" id="1_ns6u7"]
+[ext_resource type="Texture2D" uid="uid://ca6l2er2a5crg" path="res://icon.svg" id="1_tyffc"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c6agx"]
+size = Vector2(5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqkwp"]
+albedo_texture = ExtResource("1_tyffc")
+
+[node name="Node3D" type="Node3D" unique_id=53535480]
+
+[node name="Camera" parent="." unique_id=1491955087 instance=ExtResource("1_ns6u7")]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 2, 2, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=74808664]
+mesh = SubResource("PlaneMesh_c6agx")
+surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
