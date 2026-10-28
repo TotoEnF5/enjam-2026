@@ -5,6 +5,9 @@
 [sub_resource type="BoxMesh" id="BoxMesh_c6agx"]
 size = Vector3(0.25, 0.25, 0.25)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkda2"]
+resource_local_to_scene = true
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
 size = Vector3(0.25, 0.25, 0.25)
 
@@ -13,6 +16,7 @@ script = ExtResource("1_pkda2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=356192535]
 mesh = SubResource("BoxMesh_c6agx")
+surface_material_override/0 = SubResource("StandardMaterial3D_pkda2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=63286395]
 
