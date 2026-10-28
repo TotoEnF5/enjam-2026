@@ -8,8 +8,12 @@ func _on_button_play_pressed() -> void:
 
 
 func _on_button_credits_pressed() -> void:
-	#if
-	anim.play("Spawn_credits")
+	if cred == false :
+		anim.play("Spawn_credits")
+		cred = true
+	elif cred == true :
+		cred = false
+		anim.play_backwards("Spawn_credits")
 
 	pass # Replace with function body.
 
