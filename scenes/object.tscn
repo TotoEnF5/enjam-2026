@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://j3j4co2wp81e"]
+
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/object.gd" id="1_pkda2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c6agx"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Object" type="Node3D" unique_id=245253461]
+script = ExtResource("1_pkda2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=356192535]
+mesh = SubResource("BoxMesh_c6agx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=63286395]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1243181864]
+shape = SubResource("BoxShape3D_c6agx")
