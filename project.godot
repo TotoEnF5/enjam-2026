@@ -15,10 +15,18 @@ run/main_scene="uid://bfo16nbywca6i"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+flowerwall_crt="*uid://cc1fomjf362h5"
+
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/flowerwall_crt/plugin.cfg")
 
 [physics]
 

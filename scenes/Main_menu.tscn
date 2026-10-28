@@ -1,9 +1,228 @@
 [gd_scene format=3 uid="uid://ds1tl3of3b5we"]
 
-[node name="MainMenu" type="Control" unique_id=1801828032]
+[ext_resource type="Script" uid="uid://cvgr1mucyhthv" path="res://scripts/main_menu.gd" id="1_d1rr7"]
+[ext_resource type="Script" uid="uid://bhb82fdvhjsbv" path="res://scripts/button.gd" id="2_d1rr7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddug4"]
+bg_color = Color(0.7344132, 0.5156983, 0.70600116, 1)
+
+[sub_resource type="Animation" id="Animation_d1rr7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1200, 200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ow2sg"]
+resource_name = "Spawn_credits"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credits:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.46666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1200, 200), Vector2(780, 200), Vector2(810, 200), Vector2(790, 200), Vector2(800, 200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Credits:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.2990813, 0.4, 0.46666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.08726646, 0.08726646, -0.08726646259971647, 0.05235987755982989, -0.01745329251994329, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtdab"]
+_data = {
+&"RESET": SubResource("Animation_d1rr7"),
+&"Spawn_credits": SubResource("Animation_ow2sg")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gq8w2"]
+bg_color = Color(0.24882069, 0.2115818, 0.34590575, 1)
+
+[node name="MainMenu" type="Control" unique_id=1801828032 node_paths=PackedStringArray("anim")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_d1rr7")
+anim = NodePath("AnimationPlayer")
+
+[node name="BG" type="Panel" parent="." unique_id=1339957524]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddug4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1527695874]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -248.0
+offset_right = 250.0
+offset_bottom = -48.0
+grow_vertical = 0
+
+[node name="Button_play" type="Button" parent="VBoxContainer" unique_id=371686126]
+layout_mode = 2
+text = "JOUER"
+script = ExtResource("2_d1rr7")
+
+[node name="Button_credits" type="Button" parent="VBoxContainer" unique_id=1039396264]
+layout_mode = 2
+text = "CRÉDITS"
+script = ExtResource("2_d1rr7")
+
+[node name="Button_quit" type="Button" parent="VBoxContainer" unique_id=1958949804]
+layout_mode = 2
+text = "QUITTER"
+script = ExtResource("2_d1rr7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1001990930]
+libraries/ = SubResource("AnimationLibrary_qtdab")
+
+[node name="Credits" type="Panel" parent="." unique_id=1132605474]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -124.0
+offset_right = 348.00195
+offset_bottom = 276.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gq8w2")
+
+[node name="MarginContainer" type="MarginContainer" parent="Credits" unique_id=64171088]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Credits/MarginContainer" unique_id=111754543]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits/MarginContainer/HBoxContainer" unique_id=757555981]
+layout_mode = 2
+
+[node name="Antonin Rigaud" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1613173133]
+layout_mode = 2
+
+[node name="Antonin Rigaud2" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer" unique_id=21996548]
+layout_mode = 2
+text = "Antonin Rigaud"
+
+[node name="Label2" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1481500430]
+layout_mode = 2
+text = "Théo Monneau"
+
+[node name="Label" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1659146527]
+layout_mode = 2
+text = "Tom Mandin"
+
+[node name="Label3" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1572532591]
+layout_mode = 2
+text = "Amélie Pezous"
+
+[node name="Label4" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer" unique_id=267620194]
+layout_mode = 2
+text = "Pi Tavernier"
+
+[node name="Label5" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1317338942]
+layout_mode = 2
+text = "Romain Messer"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Credits/MarginContainer/HBoxContainer" unique_id=1704761984]
+layout_mode = 2
+
+[node name="Antonin Rigaud" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=124243572]
+layout_mode = 2
+
+[node name="Antonin Rigaud2" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1085178300]
+layout_mode = 2
+text = "GD"
+
+[node name="Label2" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1839545227]
+layout_mode = 2
+text = "Graph"
+
+[node name="Label" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=375995884]
+layout_mode = 2
+text = "Dev"
+
+[node name="Label3" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=184254254]
+layout_mode = 2
+text = "GD"
+
+[node name="Label4" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=133674938]
+layout_mode = 2
+text = "Graph"
+
+[node name="Label5" type="Label" parent="Credits/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=800089513]
+layout_mode = 2
+text = "GD / Mana"
+
+[node name="Button" type="Button" parent="Credits" unique_id=1806188834]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 50.0
+grow_horizontal = 0
+text = "X"
+expand_icon = true
+
+[connection signal="pressed" from="VBoxContainer/Button_play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_credits" to="." method="_on_button_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_quit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="Credits/Button" to="." method="_on_button_pressed"]
