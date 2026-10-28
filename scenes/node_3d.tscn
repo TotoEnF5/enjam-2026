@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bfo16nbywca6i"]
 
-[ext_resource type="PackedScene" uid="uid://vbyabsc1c8un" path="res://scenes/camera.tscn" id="1_ns6u7"]
 [ext_resource type="Texture2D" uid="uid://ca6l2er2a5crg" path="res://icon.svg" id="1_tyffc"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c6agx"]
@@ -9,11 +8,29 @@ size = Vector2(5, 5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqkwp"]
 albedo_texture = ExtResource("1_tyffc")
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_tyffc"]
+size = Vector2(5, 5)
+
 [node name="Node3D" type="Node3D" unique_id=53535480]
 
-[node name="Camera" parent="." unique_id=1491955087 instance=ExtResource("1_ns6u7")]
-transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 2, 2, 2)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1908228732]
+transform = Transform3D(0.7071068, -0.35355338, 0.61237246, 0, 0.8660254, 0.50000006, -0.7071068, -0.35355338, 0.61237246, 3.5, 3.5, 3.5)
+fov = 55.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=74808664]
+[node name="House" type="Node3D" parent="." unique_id=188685545]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, 4.7683716e-07, 2.3841858e-07, 4.7683716e-07)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House" unique_id=74808664]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -2.3841858e-07, 0, -2.3841858e-07)
 mesh = SubResource("PlaneMesh_c6agx")
+surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="House" unique_id=1712027319]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -2.5, 2.5, 0)
+mesh = SubResource("PlaneMesh_tyffc")
+surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="House" unique_id=458311730]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 2.5, -2.5)
+mesh = SubResource("PlaneMesh_tyffc")
 surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")

@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://vbyabsc1c8un"]
-
-[ext_resource type="Script" uid="uid://b6jtwra3tdum8" path="res://scripts/camera.gd" id="1_cvpoc"]
-
-[node name="Camera" type="Camera3D" unique_id=1491955087]
-transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 0, 0)
-projection = 1
-script = ExtResource("1_cvpoc")
