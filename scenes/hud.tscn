@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://beye3r8f266w0"]
 
-[node name="GameGui" type="Control" unique_id=928920586]
+[node name="HUD" type="Control" unique_id=928920586]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

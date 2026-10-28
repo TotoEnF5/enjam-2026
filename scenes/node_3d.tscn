@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://j3j4co2wp81e" path="res://scenes/object.tscn" id="2_ns6u7"]
 [ext_resource type="PackedScene" uid="uid://duo44oo3kqxdl" path="res://scenes/snap_point.tscn" id="3_5t4e2"]
 [ext_resource type="PackedScene" uid="uid://tl12l6wootjk" path="res://scenes/object_mover.tscn" id="4_xvgsr"]
-[ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/game_gui.tscn" id="5_oqwcg"]
+[ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/hud.tscn" id="5_oqwcg"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c6agx"]
 size = Vector2(5, 5)

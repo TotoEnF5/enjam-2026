@@ -1,27 +1,24 @@
 [gd_scene format=3 uid="uid://duo44oo3kqxdl"]
 
 [ext_resource type="Script" uid="uid://bagfp4td4avc1" path="res://scripts/snap_point.gd" id="1_3w5ko"]
-[ext_resource type="Texture2D" uid="uid://ca6l2er2a5crg" path="res://icon.svg" id="2_uarwm"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_c6agx"]
-size = Vector3(0.25, 0.25, 0.25)
+[sub_resource type="SphereMesh" id="SphereMesh_uarwm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3w5ko"]
-albedo_color = Color(1, 0, 0, 1)
-albedo_texture = ExtResource("2_uarwm")
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.5019608)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
-size = Vector3(0.25, 0.25, 0.25)
+[sub_resource type="SphereShape3D" id="SphereShape3D_uarwm"]
 
 [node name="SnapPoint" type="Node3D" unique_id=1161725782]
 script = ExtResource("1_3w5ko")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144146389]
-mesh = SubResource("BoxMesh_c6agx")
+mesh = SubResource("SphereMesh_uarwm")
 surface_material_override/0 = SubResource("StandardMaterial3D_3w5ko")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1530563220]
 collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=409592790]
-shape = SubResource("BoxShape3D_c6agx")
+shape = SubResource("SphereShape3D_uarwm")

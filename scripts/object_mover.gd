@@ -6,10 +6,12 @@ extends Node3D
 
 
 const _OBJECT_MASK: int = 0b1
-const _SNAPPER_MASK: int = 0b01
+const _SNAPPER_MASK: int = 0b10
 
 var _current_object: Node3D = null
 var _targeted_object: Node3D = null
+
+var _targeted_snapper: Node3D = null
 
 var _initial_object_pos: Vector3
 
@@ -20,19 +22,29 @@ func _input(event: InputEvent) -> void:
 
 	if event is InputEventMouseMotion:
 		if _current_object != null:
-			var mouse_pos = get_viewport().get_mouse_position()
-			var pos = camera.project_ray_origin(mouse_pos)
-			_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 2
+			if _targeted_snapper == null:
+				var mouse_pos = get_viewport().get_mouse_position()
+				var pos = camera.project_ray_origin(mouse_pos)
+				_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 2
+			else:
+				if _targeted_snapper != null:
+					_current_object.position = _targeted_snapper.position
+
 
 	if event is InputEventMouseButton:
 		if not event.pressed:
 			return
 
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if _targeted_object != _current_object:
+			if _current_object == null:
 				_current_object = _targeted_object
-				_current_object.take()
 				_initial_object_pos = _current_object.position
+				_current_object.take()
+			else:
+				if _targeted_snapper != null:
+					_current_object.position = _targeted_snapper.position
+					_current_object.untake()
+					_current_object = null
 
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if _current_object == null:
@@ -44,17 +56,22 @@ func _input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	var object = _raycast(_OBJECT_MASK)
-	if object != null:
-		if _targeted_object != null:
-			_targeted_object.untarget()
+	if _current_object == null:
+		var object = _raycast(_OBJECT_MASK)
+		if object != null:
+			if _targeted_object != null:
+				_targeted_object.untarget()
 
-		_targeted_object = object
-		_targeted_object.target()
+			_targeted_object = object
+			_targeted_object.target()
+		else:
+			if _targeted_object != null:
+				_targeted_object.untarget()
 	else:
-		if _targeted_object != null:
-			_targeted_object.untarget()
+		var snapper = _raycast(_SNAPPER_MASK)
+		_targeted_snapper = snapper
 
+	
 func _raycast(mask: int) -> Node3D:
 	var mouse_pos = get_viewport().get_mouse_position()
 	var space = get_world_3d().direct_space_state
