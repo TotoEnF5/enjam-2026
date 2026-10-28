@@ -1,21 +1,24 @@
 [gd_scene format=3 uid="uid://bfo16nbywca6i"]
 
-[ext_resource type="Texture2D" uid="uid://dryywuwbsqyer" path="res://assets/textures/moo.jpg" id="1_xvgsr"]
-[ext_resource type="PackedScene" uid="uid://j3j4co2wp81e" path="res://scenes/object.tscn" id="2_ns6u7"]
-[ext_resource type="PackedScene" uid="uid://duo44oo3kqxdl" path="res://scenes/snap_point.tscn" id="3_5t4e2"]
-[ext_resource type="PackedScene" uid="uid://tl12l6wootjk" path="res://scenes/object_mover.tscn" id="4_xvgsr"]
-[ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/hud.tscn" id="5_oqwcg"]
+[ext_resource type="Texture2D" uid="uid://dryywuwbsqyer" path="res://assets/textures/moo.jpg" id="1_f74lx"]
+[ext_resource type="Script" uid="uid://c5o3sltmtvyon" path="res://scripts/house.gd" id="1_ptc3g"]
+[ext_resource type="PackedScene" uid="uid://duo44oo3kqxdl" path="res://scenes/snap_point.tscn" id="3_wcu0q"]
+[ext_resource type="PackedScene" uid="uid://tl12l6wootjk" path="res://scenes/object_mover.tscn" id="4_bwc8c"]
+[ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/hud.tscn" id="5_mhx8p"]
+[ext_resource type="PackedScene" uid="uid://c5d572kpuau7p" path="res://scenes/inventory.tscn" id="6_65la3"]
+[ext_resource type="PackedScene" uid="uid://x2uulteh23mo" path="res://scenes/placeable_objects/test_object.tscn" id="7_ptc3g"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c6agx"]
 size = Vector2(5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqkwp"]
-albedo_texture = ExtResource("1_xvgsr")
+albedo_texture = ExtResource("1_f74lx")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tyffc"]
 size = Vector2(5, 5)
 
-[node name="Node3D" type="Node3D" unique_id=53535480]
+[node name="House" type="Node3D" unique_id=53535480]
+script = ExtResource("1_ptc3g")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1908228732]
 transform = Transform3D(0.7071068, -0.35355338, 0.61237246, 0, 0.8660254, 0.50000006, -0.7071068, -0.35355338, 0.61237246, 3.5, 3.5, 3.5)
@@ -44,25 +47,35 @@ transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.3
 mesh = SubResource("PlaneMesh_tyffc")
 surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
 
-[node name="Objects" type="Node3D" parent="." unique_id=1195166315]
-
-[node name="Object" parent="Objects" unique_id=245253461 instance=ExtResource("2_ns6u7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9618556, 0)
-
-[node name="Object2" parent="Objects" unique_id=276284403 instance=ExtResource("2_ns6u7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8689432, 0)
-
 [node name="Snappers" type="Node3D" parent="." unique_id=1393859304]
 
-[node name="SnapPoint" parent="Snappers" unique_id=1161725782 instance=ExtResource("3_5t4e2")]
+[node name="SnapPoint" parent="Snappers" unique_id=1161725782 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.626677, 0.5791967, 0.6555996)
 
-[node name="SnapPoint2" parent="Snappers" unique_id=1993417590 instance=ExtResource("3_5t4e2")]
+[node name="SnapPoint2" parent="Snappers" unique_id=1993417590 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6933775, 0.5791967, -0.778409)
 
-[node name="ObjectMover" parent="." unique_id=1059546158 node_paths=PackedStringArray("camera") instance=ExtResource("4_xvgsr")]
+[node name="ObjectMover" parent="." unique_id=1059546158 node_paths=PackedStringArray("camera") instance=ExtResource("4_bwc8c")]
 camera = NodePath("../Camera3D")
+
+[node name="Objects" type="Node3D" parent="." unique_id=597314233]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1379798987]
 
-[node name="GameGui" parent="CanvasLayer" unique_id=928920586 instance=ExtResource("5_oqwcg")]
+[node name="HUD" parent="CanvasLayer" unique_id=928920586 instance=ExtResource("5_mhx8p")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Inventory" parent="CanvasLayer" unique_id=1890128205 instance=ExtResource("6_65la3")]
+anchors_preset = 7
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+items = Array[PackedScene]([ExtResource("7_ptc3g"), ExtResource("7_ptc3g"), ExtResource("7_ptc3g"), ExtResource("7_ptc3g")])
+
+[connection signal="item_selected" from="CanvasLayer/Inventory" to="." method="_on_inventory_item_selected"]

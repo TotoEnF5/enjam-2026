@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://c5d572kpuau7p"]
+
+[ext_resource type="Script" uid="uid://eaxdfjeegfeu" path="res://scripts/inventory.gd" id="1_hj2ta"]
+[ext_resource type="Texture2D" uid="uid://b2uiqldjery75" path="res://assets/textures/wilson.jpg" id="4_uae8j"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qw0r6"]
+load_path = "res://.godot/imported/baltrou.jpg-41903fcd6f5958b93476b3c171b36698.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s887n"]
+load_path = "res://.godot/imported/baltrou.jpg-41903fcd6f5958b93476b3c171b36698.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g71ie"]
+load_path = "res://.godot/imported/baltrou.jpg-41903fcd6f5958b93476b3c171b36698.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sr8g6"]
+load_path = "res://.godot/imported/baltrou.jpg-41903fcd6f5958b93476b3c171b36698.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p7iul"]
+load_path = "res://.godot/imported/baltrou.jpg-41903fcd6f5958b93476b3c171b36698.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_td2ew"]
+load_path = "res://.godot/imported/moo.jpg-a1d7064a35cecd531bf3b97d0417cfba.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ylenm"]
+load_path = "res://.godot/imported/moo.jpg-a1d7064a35cecd531bf3b97d0417cfba.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0df5h"]
+load_path = "res://.godot/imported/moo.jpg-a1d7064a35cecd531bf3b97d0417cfba.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fiysm"]
+load_path = "res://.godot/imported/moo.jpg-a1d7064a35cecd531bf3b97d0417cfba.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_brsb2"]
+load_path = "res://.godot/imported/moo.jpg-a1d7064a35cecd531bf3b97d0417cfba.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hj2ta"]
+load_path = "res://.godot/imported/spon.jpg-d63b75863af047d8ed5c412354337ac2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ty45s"]
+load_path = "res://.godot/imported/spon.jpg-d63b75863af047d8ed5c412354337ac2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_53g1v"]
+load_path = "res://.godot/imported/spon.jpg-d63b75863af047d8ed5c412354337ac2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yyk2a"]
+load_path = "res://.godot/imported/baltrou.jpg-41903fcd6f5958b93476b3c171b36698.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uae8j"]
+load_path = "res://.godot/imported/spon.jpg-d63b75863af047d8ed5c412354337ac2.ctex"
+
+[node name="Inventory" type="Control" unique_id=1890128205]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hj2ta")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=960018576]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = -128.0
+offset_right = 262.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer" unique_id=1646942835]
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = SubResource("CompressedTexture2D_qw0r6")
+texture_pressed = SubResource("CompressedTexture2D_s887n")
+texture_hover = SubResource("CompressedTexture2D_g71ie")
+texture_disabled = SubResource("CompressedTexture2D_sr8g6")
+texture_focused = SubResource("CompressedTexture2D_p7iul")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer" unique_id=2006842960]
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = SubResource("CompressedTexture2D_td2ew")
+texture_pressed = SubResource("CompressedTexture2D_ylenm")
+texture_hover = SubResource("CompressedTexture2D_0df5h")
+texture_disabled = SubResource("CompressedTexture2D_fiysm")
+texture_focused = SubResource("CompressedTexture2D_brsb2")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer" unique_id=1743158207]
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = SubResource("CompressedTexture2D_hj2ta")
+texture_pressed = SubResource("CompressedTexture2D_ty45s")
+texture_hover = SubResource("CompressedTexture2D_53g1v")
+texture_disabled = SubResource("CompressedTexture2D_yyk2a")
+texture_focused = SubResource("CompressedTexture2D_uae8j")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer" unique_id=1951092199]
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 2
+texture_normal = ExtResource("4_uae8j")
+texture_pressed = ExtResource("4_uae8j")
+texture_hover = ExtResource("4_uae8j")
+texture_disabled = ExtResource("4_uae8j")
+texture_focused = ExtResource("4_uae8j")
+stretch_mode = 0

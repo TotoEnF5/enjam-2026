@@ -16,6 +16,12 @@ var _targeted_snapper: Node3D = null
 var _initial_object_pos: Vector3
 
 
+func set_current_object(object: Node3D) -> void:
+	_current_object = object
+	_initial_object_pos = _current_object.position
+	_current_object.take()
+
+
 func _input(event: InputEvent) -> void:
 	if event is not InputEventMouse:
 		return
@@ -36,10 +42,8 @@ func _input(event: InputEvent) -> void:
 			return
 
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if _current_object == null:
-				_current_object = _targeted_object
-				_initial_object_pos = _current_object.position
-				_current_object.take()
+			if _current_object == null and _targeted_object != null:
+				set_current_object(_targeted_object)
 			else:
 				if _targeted_snapper != null:
 					_current_object.position = _targeted_snapper.position
@@ -50,8 +54,7 @@ func _input(event: InputEvent) -> void:
 			if _current_object == null:
 				return
 
-			_current_object.position = _initial_object_pos
-			_current_object.untake()
+			_current_object.queue_free()
 			_current_object = null
 
 
@@ -67,6 +70,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			if _targeted_object != null:
 				_targeted_object.untarget()
+			_targeted_object = null
 	else:
 		var snapper = _raycast(_SNAPPER_MASK)
 		_targeted_snapper = snapper

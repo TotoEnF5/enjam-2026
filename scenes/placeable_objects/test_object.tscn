@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://x2uulteh23mo"]
+
+[ext_resource type="PackedScene" uid="uid://j3j4co2wp81e" path="res://scenes/placeable_objects/placeable_object_base.tscn" id="1_qno7i"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_qno7i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qno7i"]
+resource_local_to_scene = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qno7i"]
+size = Vector3(1.0096436, 1.0036011, 0.9998779)
+
+[node name="Object" unique_id=245253461 instance=ExtResource("1_qno7i")]
+
+[node name="MeshInstance3D" parent="." index="0" unique_id=356192535]
+mesh = SubResource("PrismMesh_qno7i")
+surface_material_override/0 = SubResource("StandardMaterial3D_qno7i")
+
+[node name="CollisionShape3D" parent="StaticBody3D" parent_id_path=PackedInt32Array(63286395) index="0" unique_id=1243181864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00030517578, -0.00045776367, 0.0004272461)
+shape = SubResource("BoxShape3D_qno7i")
