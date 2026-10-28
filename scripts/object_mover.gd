@@ -11,20 +11,36 @@ const _SNAPPER_MASK: int = 0b01
 var _current_object: Node3D = null
 var _targeted_object: Node3D = null
 
+var _initial_object_pos: Vector3
+
 
 func _input(event: InputEvent) -> void:
 	if event is not InputEventMouse:
 		return
 
-	if event.is_pressed():
-		if _targeted_object != _current_object:
-			_current_object = _targeted_object
+	if event is InputEventMouseMotion:
+		if _current_object != null:
+			var mouse_pos = get_viewport().get_mouse_position()
+			var pos = camera.project_ray_origin(mouse_pos)
+			_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 2
 
+	if event is InputEventMouseButton:
+		if not event.pressed:
+			return
 
-	if _current_object != null:
-		var mouse_pos = get_viewport().get_mouse_position()
-		var pos = camera.project_ray_origin(mouse_pos)
-		_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 2
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if _targeted_object != _current_object:
+				_current_object = _targeted_object
+				_current_object.take()
+				_initial_object_pos = _current_object.position
+
+		if event.button_index == MOUSE_BUTTON_RIGHT:
+			if _current_object == null:
+				return
+
+			_current_object.position = _initial_object_pos
+			_current_object.untake()
+			_current_object = null
 
 
 func _physics_process(delta: float) -> void:
@@ -32,6 +48,7 @@ func _physics_process(delta: float) -> void:
 	if object != null:
 		if _targeted_object != null:
 			_targeted_object.untarget()
+
 		_targeted_object = object
 		_targeted_object.target()
 	else:
