@@ -35,7 +35,7 @@ func _input(event: InputEvent) -> void:
 				_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 10
 			else:
 				if _targeted_snapper != null:
-					if (_targeted_snapper.is_floor and _current_object.item.on_floor) or (_targeted_snapper.is_etagere and _current_object.item.on_etagere) or (_targeted_snapper.is_wall and _current_object.item.on_wall):
+					if _targeted_snapper.is_poubelle or (_targeted_snapper.is_floor and _current_object.item.on_floor) or (_targeted_snapper.is_etagere and _current_object.item.on_etagere) or (_targeted_snapper.is_wall and _current_object.item.on_wall):
 						_current_object.global_position = _targeted_snapper.global_position
 						_current_object.global_rotation = _targeted_snapper.global_rotation
 					else:
@@ -58,11 +58,16 @@ func _input(event: InputEvent) -> void:
 				set_current_object(_targeted_object)
 			else:
 				if _targeted_snapper != null:
-					_current_object.global_position = _targeted_snapper.global_position
-					_current_object.global_rotation = _targeted_snapper.global_rotation
-					_current_object.untake()
-					_current_object = null
-					_targeted_snapper = null
+					if _targeted_snapper.is_poubelle:
+						_current_object.queue_free()
+						_current_object = null
+						_targeted_snapper = null
+					else:
+						_current_object.global_position = _targeted_snapper.global_position
+						_current_object.global_rotation = _targeted_snapper.global_rotation
+						_current_object.untake()
+						_current_object = null
+						_targeted_snapper = null
 
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if _current_object == null:

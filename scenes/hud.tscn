@@ -4,15 +4,15 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahhtf"]
 bg_color = Color(0, 0, 0, 0.5019608)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
 border_color = Color(0, 0, 0, 0.5019608)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [node name="HUD" type="Control" unique_id=928920586]
 layout_mode = 3
@@ -26,10 +26,10 @@ script = ExtResource("1_ahhtf")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=694562229]
 layout_mode = 1
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 206.0
-offset_bottom = 73.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 214.0
+offset_bottom = 81.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ahhtf")
 
