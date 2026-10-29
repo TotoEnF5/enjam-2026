@@ -40,4 +40,8 @@ rendering_device/driver.windows="d3d12"
 scaling_3d/mode=5
 scaling_3d/mode.ios=5
 scaling_3d/mode.macos=5
+<<<<<<< HEAD
 scaling_3d/scale=0.25
+=======
+scaling_3d/scale=0.16666667
+>>>>>>> b1762e1 (meuble et menu principal)
