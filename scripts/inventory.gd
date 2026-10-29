@@ -7,6 +7,7 @@ signal item_selected(item_scene: PackedScene, index: int)
 @export var button_max_size: float = 128
 
 @onready var _buttons_container = $HBoxContainer
+@onready var _description = $PanelContainer
 
 
 func take_item(index: int) -> void:
@@ -35,4 +36,27 @@ func _ready() -> void:
 		button.pressed.connect(func ():
 			item_selected.emit(items[i].placeable_object, i)
 		)
+
+		button.mouse_entered.connect(func ():
+			_set_description(i)
+			_description.visible = true
+		)
+
+		button.mouse_exited.connect(func ():
+			_description.visible = false
+		)
+
 		i += 1
+
+
+func _input(event: InputEvent) -> void:
+	if event is not InputEventMouseMotion:
+		return
+
+	_description.global_position = event.position
+	_description.global_position.y -= _description.size.y
+
+
+func _set_description(index: int) -> void:
+	%Title.text = "[wave amp=30.0 freq=5.0 connected=1]" + items[index].title + "[/wave]"
+	%Description.text = items[index].description
