@@ -3,8 +3,13 @@ extends Control
 
 var cred : bool = false
 
+
+func _ready() -> void:
+	MusicPlayer.play_menu()
+
+
 func _on_button_play_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/character_creator.tscn")
 
 
 func _on_button_credits_pressed() -> void:

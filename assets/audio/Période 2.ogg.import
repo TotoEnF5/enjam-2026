@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mv2it213jbmy"
+path="res://.godot/imported/Période 2.ogg-b9b4159398ef25866c3928d36c6081db.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/Période 2.ogg"
+dest_files=["res://.godot/imported/Période 2.ogg-b9b4159398ef25866c3928d36c6081db.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

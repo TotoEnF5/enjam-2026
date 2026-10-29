@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 flowerwall_crt="*uid://cc1fomjf362h5"
 Globals="*uid://c134l0qbv6nvi"
+MusicPlayer="*uid://xc3rv2hdjm3r"
 
 [display]
 
@@ -39,4 +40,4 @@ rendering_device/driver.windows="d3d12"
 scaling_3d/mode=5
 scaling_3d/mode.ios=5
 scaling_3d/mode.macos=5
-scaling_3d/scale=0.11111111
+scaling_3d/scale=0.25

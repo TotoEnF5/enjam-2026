@@ -77,7 +77,7 @@ func button_pressed(button_name: String) -> void:
 		#save_dialog.popup_centered()
 		var image = paint_control.get_image()
 		Globals.painting = image
-		get_tree().change_scene_to_file("res://scenes/house.tscn")
+		get_tree().change_scene_to_file("res://scenes/gertrude.tscn")
 	elif button_name == "undo_stroke":
 		paint_control.undo_stroke()
 

@@ -13,6 +13,7 @@ var _current_iteration: int = 0
 
 
 func _ready() -> void:
+	MusicPlayer.play_iter(0)
 	_inventory.set_inventory(inventories[_current_iteration])
 	_hud.oui_pressed.connect(_go_to_next_iteration)
 
@@ -30,7 +31,10 @@ func _go_to_next_iteration() -> void:
 
 		var clear_tween = get_tree().create_tween()
 		clear_tween.tween_property(_color_rect, "color", Color(0, 0, 0, 0), 1)
-		clear_tween.tween_callback(func (): _color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE)
+		clear_tween.tween_callback(func ():
+			_color_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			MusicPlayer.play_iter(_current_iteration)
+		)
 	)
 
 
