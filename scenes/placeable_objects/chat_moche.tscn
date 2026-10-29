@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://8qsgengixgay"]
+
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_mc036"]
+[ext_resource type="PackedScene" uid="uid://brd6vknd6vlal" path="res://assets/Models/ChatMoche.gltf" id="2_iwwec"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1.0603638, 1.7738647, 2.0507813)
+
+[node name="ChatMoche" type="Node3D" unique_id=695380834]
+script = ExtResource("1_mc036")
+
+[node name="ChatMoche" parent="." unique_id=189151540 instance=ExtResource("2_iwwec")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.9788606, 0, 0.9861698)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1184853581]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1274366621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021759033, 0.8648987, -0.032226563)
+shape = SubResource("BoxShape3D_c6agx")

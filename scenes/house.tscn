@@ -1,31 +1,28 @@
 [gd_scene format=3 uid="uid://bfo16nbywca6i"]
 
-[ext_resource type="Texture2D" uid="uid://dryywuwbsqyer" path="res://assets/textures/moo.jpg" id="1_f74lx"]
 [ext_resource type="Script" uid="uid://c5o3sltmtvyon" path="res://scripts/house.gd" id="1_ptc3g"]
 [ext_resource type="Script" uid="uid://bhgyebr222u8t" path="res://resources/iteration_inventory.gd" id="2_wcu0q"]
 [ext_resource type="Resource" uid="uid://d22bju6erbjg5" path="res://resources/inventories/inventory_0.tres" id="3_bwc8c"]
 [ext_resource type="PackedScene" uid="uid://duo44oo3kqxdl" path="res://scenes/snap_point.tscn" id="3_wcu0q"]
 [ext_resource type="PackedScene" uid="uid://tl12l6wootjk" path="res://scenes/object_mover.tscn" id="4_bwc8c"]
-[ext_resource type="Resource" uid="uid://b1n1ci4y2gsi1" path="res://resources/inventories/inventory_1.tres" id="4_mhx8p"]
+[ext_resource type="PackedScene" uid="uid://d0rn6cil0ft5g" path="res://assets/Models/Piece.glb" id="5_bwc8c"]
 [ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/hud.tscn" id="5_mhx8p"]
 [ext_resource type="PackedScene" uid="uid://c5d572kpuau7p" path="res://scenes/inventory.tscn" id="6_65la3"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_c6agx"]
-size = Vector2(5, 5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqkwp"]
-albedo_texture = ExtResource("1_f74lx")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_tyffc"]
-size = Vector2(5, 5)
+[ext_resource type="PackedScene" uid="uid://335nsl16k8oe" path="res://assets/Models/Lit.glb" id="6_mhx8p"]
+[ext_resource type="PackedScene" uid="uid://bqn1lscopixse" path="res://assets/Models/Armoire.glb" id="7_65la3"]
+[ext_resource type="PackedScene" uid="uid://c01df0upo1p0k" path="res://assets/Models/table.gltf" id="8_7685u"]
+[ext_resource type="PackedScene" uid="uid://bllptkg07gy6a" path="res://assets/Models/Frigo.glb" id="8_qcuhb"]
+[ext_resource type="PackedScene" uid="uid://d16ewh1jxbw4" path="res://assets/Models/Chaise.gltf" id="9_3853c"]
+[ext_resource type="PackedScene" uid="uid://bwu0ardtagdky" path="res://assets/Models/meubleTV.gltf" id="10_3853c"]
+[ext_resource type="PackedScene" uid="uid://ceow1mavoxtd8" path="res://assets/Models/table de chevet.gltf" id="11_bhgw4"]
 
 [node name="House" type="Node3D" unique_id=53535480]
 script = ExtResource("1_ptc3g")
-inventories = Array[ExtResource("2_wcu0q")]([ExtResource("3_bwc8c"), ExtResource("4_mhx8p")])
+inventories = Array[ExtResource("2_wcu0q")]([ExtResource("3_bwc8c")])
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1908228732]
-transform = Transform3D(0.7071068, -0.35355338, 0.61237246, 0, 0.8660254, 0.50000006, -0.7071068, -0.35355338, 0.61237246, 3.5, 3.5, 3.5)
-fov = 55.0
+transform = Transform3D(-0.70710677, -0.25915548, 0.65790457, 0, 0.9304176, 0.3665012, -0.70710677, 0.25915548, -0.65790457, 14.69, 11.006, -16.331)
+fov = 40.0
 
 [node name="House" type="Node3D" parent="." unique_id=188685545]
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, 4.7683716e-07, 2.3841858e-07, 4.7683716e-07)
@@ -33,30 +30,128 @@ transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, 4.7
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="House" unique_id=1025563626]
 transform = Transform3D(0.73845536, -0.52254695, 0.42617887, 0, 0.6320293, 0.7749445, -0.6743024, -0.5722619, 0.4667254, 0, 0, 0)
 
-[node name="Walls" type="Node3D" parent="House" unique_id=463590499]
+[node name="Piece2" parent="House" unique_id=716802815 instance=ExtResource("5_bwc8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8464687, 0, -0.779691)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Walls" unique_id=74808664]
-transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -2.3841858e-07, 0, -2.3841858e-07)
-mesh = SubResource("PlaneMesh_c6agx")
-surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
+[node name="Lit2" parent="House" unique_id=687043326 instance=ExtResource("6_mhx8p")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.6225166, 1.0707111, 6.91826)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="House/Walls" unique_id=1712027319]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -2.5, 2.5, 0)
-mesh = SubResource("PlaneMesh_tyffc")
-surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
+[node name="Armoire2" parent="House" unique_id=1788670629 instance=ExtResource("7_65la3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.83063245, 1.001451, 7.9405217)
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="House/Walls" unique_id=458311730]
-transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 2.5, -2.5)
-mesh = SubResource("PlaneMesh_tyffc")
-surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
+[node name="Frigo2" parent="House" unique_id=1837370348 instance=ExtResource("8_qcuhb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.932579, 0, -6.903014)
+
+[node name="table" parent="House" unique_id=680830782 instance=ExtResource("8_7685u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0701299, 0.93579197, 0.52930784)
+
+[node name="Chaise" parent="House" unique_id=1944869977 instance=ExtResource("9_3853c")]
+transform = Transform3D(-0.59136784, 0, 0.8064019, 0, 1, 0, -0.8064019, 0, -0.59136784, 4.673996, 1.0114765, 0.43623945)
+
+[node name="meubleTV" parent="House" unique_id=1086646908 instance=ExtResource("10_3853c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.455513, 1.1436467, -1.1240891)
+
+[node name="table de chevet" parent="House" unique_id=32218848 instance=ExtResource("11_bhgw4")]
+transform = Transform3D(0.983693, 0, -0.17985576, 0, 1, 0, 0.17985576, 0, 0.983693, -10.705547, 0.93054867, 4.534408)
 
 [node name="Snappers" type="Node3D" parent="." unique_id=1393859304]
 
 [node name="SnapPoint" parent="Snappers" unique_id=1161725782 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.06175801, 0, -0.99809116, 0, 1, 0, 0.99809116, 0, 0.06175801, -1.626677, 0.5791967, 0.6555996)
+transform = Transform3D(0.7230258, 0, -0.69082105, 0, 1, 0, 0.69082105, 0, 0.7230258, -5.3983727, 3.190127, 6.7121363)
+
+[node name="SnapPoint17" parent="Snappers" unique_id=1587087214 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.44959575, 0, -0.89323217, 0, 1, 0, 0.89323217, 0, 0.44959575, -9.244722, 3.4196157, 6.7121363)
+
+[node name="SnapPoint15" parent="Snappers" unique_id=412172921 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.21588072, 0, -0.9764198, 0, 1, 0, 0.9764198, 0, 0.21588072, -9.404432, 2.6587691, 3.695359)
+
+[node name="SnapPoint16" parent="Snappers" unique_id=1482421391 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(-0.11331996, 0, -0.99355865, 0, 1, 0, 0.99355865, 0, -0.11331996, -9.404432, 2.1697452, -3.6658928)
+
+[node name="SnapPoint23" parent="Snappers" unique_id=927866193 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(-0.11331996, 0, -0.99355865, 0, 1, 0, 0.99355865, 0, -0.11331996, -9.404432, 2.1697452, -2.1395411)
+
+[node name="SnapPoint14" parent="Snappers" unique_id=261639220 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.022772223, 0, -0.9997407, 0, 1, 0, 0.9997407, 0, 0.022772223, -7.1767035, 6.381539, -6.0072064)
+is_floor = false
+is_wall = true
+
+[node name="SnapPoint18" parent="Snappers" unique_id=1348308538 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.022772223, 0, -0.9997407, 0, 1, 0, 0.9997407, 0, 0.022772223, -7.1767035, 2.4909134, -7.41213)
+is_floor = false
+is_wall = true
+
+[node name="SnapPoint20" parent="Snappers" unique_id=916166078 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.65582013, 0, -0.75491714, 0, 1, 0, 0.75491714, 0, 0.65582013, -0.8832915, 3.220409, -2.1818328)
+
+[node name="SnapPoint21" parent="Snappers" unique_id=1023694979 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.9673693, 0, -0.25337055, 0, 1, 0, 0.25337055, 0, 0.9673693, 1.0435736, 3.220409, -0.7886205)
+
+[node name="SnapPoint22" parent="Snappers" unique_id=250352422 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.9673693, 0, -0.25337055, 0, 1, 0, 0.25337055, 0, 0.9673693, 3.4171298, 2.4975734, 0.026070952)
+
+[node name="SnapPoint19" parent="Snappers" unique_id=1183209974 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.022772223, 0, -0.9997407, 0, 1, 0, 0.9997407, 0, 0.022772223, -8.705616, 7.9898367, -7.41213)
 
 [node name="SnapPoint2" parent="Snappers" unique_id=1993417590 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6933775, 0.5791967, -0.778409)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6829305, 7.1578283, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint3" parent="Snappers" unique_id=307125639 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7799332, 7.1578283, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint4" parent="Snappers" unique_id=515001008 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2320468, 7.1578283, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint5" parent="Snappers" unique_id=947757268 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6829305, 4.996825, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint6" parent="Snappers" unique_id=781190702 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7799332, 4.996825, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint7" parent="Snappers" unique_id=134538267 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2320468, 4.996825, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint8" parent="Snappers" unique_id=2028766526 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6829305, 3.1755922, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint9" parent="Snappers" unique_id=1188825100 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7799332, 3.1755922, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint10" parent="Snappers" unique_id=976636673 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2320468, 3.1755922, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint11" parent="Snappers" unique_id=1227898953 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6829305, 1.0145891, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint12" parent="Snappers" unique_id=935009126 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7799332, 1.0145891, 7.889229)
+is_floor = false
+is_etagere = true
+
+[node name="SnapPoint13" parent="Snappers" unique_id=1990486820 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2320468, 1.0145891, 7.889229)
+is_floor = false
+is_etagere = true
 
 [node name="ObjectMover" parent="." unique_id=1059546158 node_paths=PackedStringArray("inventory", "camera") instance=ExtResource("4_bwc8c")]
 inventory = NodePath("../CanvasLayer/Inventory")
@@ -67,6 +162,7 @@ camera = NodePath("../Camera3D")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1379798987]
 
 [node name="HUD" parent="CanvasLayer" unique_id=928920586 instance=ExtResource("5_mhx8p")]
+visible = false
 
 [node name="Inventory" parent="CanvasLayer" unique_id=1890128205 instance=ExtResource("6_65la3")]
 anchors_preset = 7

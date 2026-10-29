@@ -1,4 +1,6 @@
 extends Node3D
 
 
-# mdr
+@export var is_floor = true
+@export var is_etagere = false
+@export var is_wall = false

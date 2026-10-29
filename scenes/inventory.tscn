@@ -55,7 +55,6 @@ layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=781339031]
 visible = false
-custom_minimum_size = Vector2(256, 0)
 custom_maximum_size = Vector2(256, 256)
 layout_mode = 1
 anchors_preset = 5
