@@ -6,8 +6,9 @@
 [ext_resource type="Resource" uid="uid://dm2qe2lvq6yjm" path="res://resources/items/moo.tres" id="3_hxdc7"]
 [ext_resource type="Resource" uid="uid://nmmcmg2xd1v0" path="res://resources/items/spon.tres" id="4_ieyme"]
 [ext_resource type="Resource" uid="uid://gnb00jgwic64" path="res://resources/items/wilson.tres" id="5_nnwc2"]
+[ext_resource type="Resource" uid="uid://cu3ctte1b5yxy" path="res://resources/items/bed.tres" id="6_hxdc7"]
 
 [resource]
 script = ExtResource("2_tvn4h")
-items = Array[ExtResource("1_akiyo")]([ExtResource("2_l37ns"), ExtResource("3_hxdc7"), ExtResource("4_ieyme"), ExtResource("5_nnwc2")])
+items = Array[ExtResource("1_akiyo")]([ExtResource("2_l37ns"), ExtResource("3_hxdc7"), ExtResource("4_ieyme"), ExtResource("5_nnwc2"), ExtResource("6_hxdc7")])
 metadata/_custom_type_script = "uid://bhgyebr222u8t"

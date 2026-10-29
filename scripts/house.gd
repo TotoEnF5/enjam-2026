@@ -40,4 +40,3 @@ func _on_inventory_item_selected(item: InventoryObject, index: int) -> void:
 	object.item = item
 	_objects.add_child(object)
 	_object_mover.set_current_object(object)
-	_inventory.take_item(index)

@@ -36,6 +36,7 @@ func _input(event: InputEvent) -> void:
 			else:
 				if _targeted_snapper != null:
 					_current_object.position = _targeted_snapper.position
+					_current_object.rotation = _targeted_snapper.rotation
 
 
 	if event is InputEventMouseButton:

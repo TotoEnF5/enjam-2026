@@ -2,6 +2,17 @@
 
 [ext_resource type="Script" uid="uid://eaxdfjeegfeu" path="res://scripts/inventory.gd" id="1_hj2ta"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qw0r6"]
+bg_color = Color(0, 0, 0, 0.5019608)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65la3"]
 bg_color = Color(0, 0, 0, 0.5019608)
 border_color = Color(0, 0, 0, 0.5019608)
@@ -25,15 +36,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hj2ta")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=960018576]
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=804545240]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qw0r6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer2" unique_id=960018576]
+layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=781339031]
 visible = false

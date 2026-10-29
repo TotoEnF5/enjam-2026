@@ -5,14 +5,14 @@ signal item_selected(item: InventoryObject, index: int)
 
 @export var button_max_size: float = 128
 
-@onready var _buttons_container = $HBoxContainer
+@onready var _buttons_container = $PanelContainer2/HBoxContainer
 @onready var _description = $PanelContainer
 
 var _inventory: IterationInventory
 
 
 func take_item(index: int) -> void:
-	_buttons_container.get_child(index).visible = false
+	_buttons_container.get_child(index).queue_free()
 
 
 func place_item(item: InventoryObject) -> void:
@@ -29,9 +29,9 @@ func set_inventory(inventory: IterationInventory) -> void:
 
 	var i = 0
 	for item in _inventory.items:
-		if Globals.hobbies.has(item.hobby):
+		if item.hobby == InventoryObject.Hobby.HOBBY_ALL or Globals.hobbies.has(item.hobby):
 			_create_button(item, i)
-		i += 1
+			i += 1
 
 
 func clear() -> void:
@@ -64,6 +64,7 @@ func _create_button(item: InventoryObject, index: int) -> void:
 
 	button.pressed.connect(func ():
 		item_selected.emit(item, index)
+		button.queue_free()
 	)
 
 	button.mouse_entered.connect(func ():

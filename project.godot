@@ -23,6 +23,7 @@ Globals="*uid://c134l0qbv6nvi"
 [display]
 
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 

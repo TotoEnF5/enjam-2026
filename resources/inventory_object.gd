@@ -3,6 +3,7 @@ extends Resource
 
 
 enum Hobby {
+	HOBBY_ALL,
 	HOBBY_MUSIC,
 	HOBBY_FISHING,
 	HOBBY_FLIRT,

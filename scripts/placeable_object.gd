@@ -9,11 +9,13 @@ var inventory_index: int
 
 
 func target() -> void:
+	return
 	var material = _mesh.get_surface_override_material(0)
 	material.albedo_color = Color.RED
 
 
 func untarget() -> void:
+	return
 	var material = _mesh.get_surface_override_material(0)
 	material.albedo_color = Color.WHITE
 

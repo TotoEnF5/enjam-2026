@@ -8,6 +8,15 @@
 transparency = 1
 albedo_color = Color(1, 0, 0, 0.5019608)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_c6agx"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqkwp"]
+transparency = 1
+albedo_color = Color(0, 0, 1, 0.5019608)
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_uarwm"]
 
 [node name="SnapPoint" type="Node3D" unique_id=1161725782]
@@ -16,6 +25,11 @@ script = ExtResource("1_3w5ko")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=144146389]
 mesh = SubResource("SphereMesh_uarwm")
 surface_material_override/0 = SubResource("StandardMaterial3D_3w5ko")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1129415668]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.5)
+mesh = SubResource("CylinderMesh_c6agx")
+surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1530563220]
 collision_layer = 2

@@ -53,7 +53,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_kqkwp")
 [node name="Snappers" type="Node3D" parent="." unique_id=1393859304]
 
 [node name="SnapPoint" parent="Snappers" unique_id=1161725782 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.626677, 0.5791967, 0.6555996)
+transform = Transform3D(0.06175801, 0, -0.99809116, 0, 1, 0, 0.99809116, 0, 0.06175801, -1.626677, 0.5791967, 0.6555996)
 
 [node name="SnapPoint2" parent="Snappers" unique_id=1993417590 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6933775, 0.5791967, -0.778409)
