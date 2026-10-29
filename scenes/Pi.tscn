@@ -1,3 +1,42 @@
 [gd_scene format=3 uid="uid://b4qj8osugmmhr"]
 
+[ext_resource type="PackedScene" uid="uid://d0rn6cil0ft5g" path="res://assets/Models/Piece.glb" id="1_ppdpd"]
+[ext_resource type="PackedScene" uid="uid://335nsl16k8oe" path="res://assets/Models/Lit.glb" id="2_0ud4g"]
+[ext_resource type="PackedScene" uid="uid://bqn1lscopixse" path="res://assets/Models/Armoire.glb" id="3_oupus"]
+[ext_resource type="PackedScene" uid="uid://bllptkg07gy6a" path="res://assets/Models/Frigo.glb" id="4_d2ikl"]
+[ext_resource type="Shader" uid="uid://cy6mtd176n4s4" path="res://scenes/Pixelization.gdshader" id="5_0ud4g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cht82"]
+render_priority = 0
+shader = ExtResource("5_0ud4g")
+shader_parameter/TwixelAngle = 0.0
+shader_parameter/PixelSize = 16.0
+shader_parameter/FogColor = Color(0, 0, 0, 1)
+shader_parameter/FogStart = 0.0
+shader_parameter/FogEnd = 0.0
+shader_parameter/Quantize = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_gq8w2"]
+material = SubResource("ShaderMaterial_cht82")
+size = Vector2(2, 1)
+
 [node name="Pi" type="Node3D" unique_id=806801646]
+
+[node name="Piece2" parent="." unique_id=457810988 instance=ExtResource("1_ppdpd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8464687, 0, -0.779691)
+
+[node name="Lit2" parent="." unique_id=2034394608 instance=ExtResource("2_0ud4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.689215, 0.9765425, 5.050596)
+
+[node name="Armoire2" parent="." unique_id=263143185 instance=ExtResource("3_oupus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3900299, 1.1261501, 7.9433975)
+
+[node name="Frigo2" parent="." unique_id=1331908444 instance=ExtResource("4_d2ikl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.933132, 1.020751, 6.824312)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=745440634]
+transform = Transform3D(-0.8253639, -0.08136694, 0.5587074, 0, 0.98956114, 0.144114, -0.56460124, 0.118946485, -0.81674796, 13.32087, 15.611431, -19.156353)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=530771510]
+transform = Transform3D(0.9999999, -7.450581e-09, 0, -1.4901161e-08, 0.99999976, 2.9802322e-08, -5.9604645e-08, 0, 0.9999998, -0.33026028, 0.06957722, -0.4777527)
+mesh = SubResource("QuadMesh_gq8w2")
