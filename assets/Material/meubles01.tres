@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8kxfx3n7i0at"]
+
+[ext_resource type="Texture2D" uid="uid://b7k50uxcbp2le" path="res://assets/Models/ENJAM.png" id="1_xcr74"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_xcr74")
+texture_filter = 0
