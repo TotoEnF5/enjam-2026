@@ -8,6 +8,7 @@
 script = ExtResource("1_r23mq")
 inventory_image = ExtResource("1_ammmp")
 placeable_object = ExtResource("2_a8csr")
+hobby = 2
 title = "Wilson"
 description = "My husband. The best oncologist that has ever lived. I think he cheats on me with his coworker that's an habitat."
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

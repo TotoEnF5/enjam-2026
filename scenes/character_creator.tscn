@@ -12,16 +12,27 @@ grow_vertical = 2
 script = ExtResource("1_tvdat")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=816003633]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -415.0
+offset_top = -85.5
+offset_right = 415.0
+offset_bottom = 85.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=331988225]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=383913875]
 layout_mode = 2
-text = "ton prénom"
+text = "Ton prénom"
 
 [node name="NameEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=1099376199]
 unique_name_in_owner = true
@@ -29,15 +40,15 @@ layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=2037290701]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1880733687]
 layout_mode = 2
-text = "tes pronoms"
+text = "Tes pronoms"
 
 [node name="Pronouns" type="OptionButton" parent="VBoxContainer/HBoxContainer2" unique_id=2017014946]
 unique_name_in_owner = true
 layout_mode = 2
-selected = 3
 item_count = 4
 popup/item_0/text = "il"
 popup/item_0/id = 0
@@ -50,10 +61,11 @@ popup/item_3/id = 3
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1142810613]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=1488063839]
 layout_mode = 2
-text = "tu es"
+text = "Tu es"
 
 [node name="Age" type="OptionButton" parent="VBoxContainer/HBoxContainer3" unique_id=1229455921]
 unique_name_in_owner = true
@@ -71,55 +83,59 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4" unique_id=561738196]
 layout_mode = 2
-text = "tes hobbies"
+text = "Tes hobbies"
 
 [node name="Musique" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=436648711]
 unique_name_in_owner = true
 layout_mode = 2
-text = "musique"
+text = "Musique"
 
 [node name="Peche" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=752136863]
 unique_name_in_owner = true
 layout_mode = 2
-text = "pêche"
+text = "Pêche"
 
 [node name="Drague" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=1426143344]
 unique_name_in_owner = true
 layout_mode = 2
-text = "drague"
+text = "Drague"
 
 [node name="Mafia" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=382470000]
 unique_name_in_owner = true
 layout_mode = 2
-text = "mafia"
+text = "Mafia"
 
 [node name="Films" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=1739919006]
 unique_name_in_owner = true
 layout_mode = 2
-text = "films"
+text = "Films"
 
 [node name="Jeux" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=545592627]
 unique_name_in_owner = true
 layout_mode = 2
-text = "jeux"
+text = "Jeux"
 
 [node name="Lecture" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=1370431443]
 unique_name_in_owner = true
 layout_mode = 2
-text = "lecture"
+text = "Lecture"
 
 [node name="Couture" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=889798791]
 unique_name_in_owner = true
 layout_mode = 2
-text = "couture"
+text = "Couture"
 
 [node name="Sport" type="CheckBox" parent="VBoxContainer/HBoxContainer4" unique_id=550410326]
 unique_name_in_owner = true
 layout_mode = 2
-text = "sport"
+text = "Sport"
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=612679624]
 layout_mode = 2
-text = "g fini"
+disabled = true
+text = "J'ai fini !"
 
+[connection signal="text_changed" from="VBoxContainer/HBoxContainer/NameEdit" to="." method="_on_name_edit_text_changed"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer2/Pronouns" to="." method="_on_pronouns_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer3/Age" to="." method="_on_age_item_selected"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

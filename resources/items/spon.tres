@@ -8,6 +8,7 @@
 script = ExtResource("1_3mf60")
 inventory_image = ExtResource("1_wpjfq")
 placeable_object = ExtResource("2_14sbx")
+hobby = 5
 title = "Spoon"
 description = "It's a spoon."
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

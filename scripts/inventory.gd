@@ -29,8 +29,10 @@ func set_inventory(inventory: IterationInventory) -> void:
 
 	var i = 0
 	for item in _inventory.items:
-		_create_button(item, i)
+		if Globals.hobbies.has(item.hobby):
+			_create_button(item, i)
 		i += 1
+
 
 func clear() -> void:
 	for button in _buttons_container.get_children():
