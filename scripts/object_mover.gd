@@ -56,7 +56,7 @@ func _input(event: InputEvent) -> void:
 			if _current_object == null:
 				return
 
-			inventory.untake_item(_current_object.inventory_index)
+			inventory.place_item(_current_object.item)
 			_current_object.queue_free()
 			_current_object = null
 

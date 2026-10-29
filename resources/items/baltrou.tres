@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://fpoii8gs7cpj"]
+
+[ext_resource type="Texture2D" uid="uid://bejw24p2403cp" path="res://assets/textures/baltrou.jpg" id="1_amula"]
+[ext_resource type="PackedScene" uid="uid://x2uulteh23mo" path="res://scenes/placeable_objects/test_object.tscn" id="2_tav25"]
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="3_ur78r"]
+
+[resource]
+script = ExtResource("3_ur78r")
+inventory_image = ExtResource("1_amula")
+placeable_object = ExtResource("2_tav25")
+title = "Baltrou"
+description = "Baron + mime into naneinf"
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

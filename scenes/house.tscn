@@ -2,15 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://dryywuwbsqyer" path="res://assets/textures/moo.jpg" id="1_f74lx"]
 [ext_resource type="Script" uid="uid://c5o3sltmtvyon" path="res://scripts/house.gd" id="1_ptc3g"]
+[ext_resource type="Script" uid="uid://bhgyebr222u8t" path="res://resources/iteration_inventory.gd" id="2_wcu0q"]
+[ext_resource type="Resource" uid="uid://d22bju6erbjg5" path="res://resources/inventories/inventory_0.tres" id="3_bwc8c"]
 [ext_resource type="PackedScene" uid="uid://duo44oo3kqxdl" path="res://scenes/snap_point.tscn" id="3_wcu0q"]
 [ext_resource type="PackedScene" uid="uid://tl12l6wootjk" path="res://scenes/object_mover.tscn" id="4_bwc8c"]
+[ext_resource type="Resource" uid="uid://b1n1ci4y2gsi1" path="res://resources/inventories/inventory_1.tres" id="4_mhx8p"]
 [ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/hud.tscn" id="5_mhx8p"]
 [ext_resource type="PackedScene" uid="uid://c5d572kpuau7p" path="res://scenes/inventory.tscn" id="6_65la3"]
-[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="7_65la3"]
-[ext_resource type="PackedScene" uid="uid://x2uulteh23mo" path="res://scenes/placeable_objects/test_object.tscn" id="7_ptc3g"]
-[ext_resource type="Texture2D" uid="uid://bejw24p2403cp" path="res://assets/textures/baltrou.jpg" id="8_qcuhb"]
-[ext_resource type="Texture2D" uid="uid://phnpttckoywi" path="res://assets/textures/spon.jpg" id="10_7685u"]
-[ext_resource type="Texture2D" uid="uid://b2uiqldjery75" path="res://assets/textures/wilson.jpg" id="11_3853c"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_c6agx"]
 size = Vector2(5, 5)
@@ -21,34 +19,9 @@ albedo_texture = ExtResource("1_f74lx")
 [sub_resource type="PlaneMesh" id="PlaneMesh_tyffc"]
 size = Vector2(5, 5)
 
-[sub_resource type="Resource" id="Resource_hj2ta"]
-script = ExtResource("7_65la3")
-inventory_image = ExtResource("8_qcuhb")
-placeable_object = ExtResource("7_ptc3g")
-title = "Super titre"
-description = "Description [rainbow freq=1.0 sat=0.8 speed=1.0][shake rate=20.0 level=5.0 connected=1]super cool[/shake][/rainbow] !"
-metadata/_custom_type_script = "uid://dlva75r2hqvej"
-
-[sub_resource type="Resource" id="Resource_f74lx"]
-script = ExtResource("7_65la3")
-inventory_image = ExtResource("1_f74lx")
-placeable_object = ExtResource("7_ptc3g")
-metadata/_custom_type_script = "uid://dlva75r2hqvej"
-
-[sub_resource type="Resource" id="Resource_ptc3g"]
-script = ExtResource("7_65la3")
-inventory_image = ExtResource("10_7685u")
-placeable_object = ExtResource("7_ptc3g")
-metadata/_custom_type_script = "uid://dlva75r2hqvej"
-
-[sub_resource type="Resource" id="Resource_wcu0q"]
-script = ExtResource("7_65la3")
-inventory_image = ExtResource("11_3853c")
-placeable_object = ExtResource("7_ptc3g")
-metadata/_custom_type_script = "uid://dlva75r2hqvej"
-
 [node name="House" type="Node3D" unique_id=53535480]
 script = ExtResource("1_ptc3g")
+inventories = Array[ExtResource("2_wcu0q")]([ExtResource("3_bwc8c"), ExtResource("4_mhx8p")])
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1908228732]
 transform = Transform3D(0.7071068, -0.35355338, 0.61237246, 0, 0.8660254, 0.50000006, -0.7071068, -0.35355338, 0.61237246, 3.5, 3.5, 3.5)
@@ -94,19 +67,20 @@ camera = NodePath("../Camera3D")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1379798987]
 
 [node name="HUD" parent="CanvasLayer" unique_id=928920586 instance=ExtResource("5_mhx8p")]
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="Inventory" parent="CanvasLayer" unique_id=1890128205 instance=ExtResource("6_65la3")]
 anchors_preset = 7
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
-items = Array[ExtResource("7_65la3")]([SubResource("Resource_hj2ta"), SubResource("Resource_f74lx"), SubResource("Resource_ptc3g"), SubResource("Resource_wcu0q")])
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1517012415]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [connection signal="item_selected" from="CanvasLayer/Inventory" to="." method="_on_inventory_item_selected"]

@@ -1,6 +1,7 @@
 extends Node3D
 
 
+var item: InventoryObject
 var inventory_index: int
 
 @onready var _mesh = $MeshInstance3D

@@ -1,52 +1,40 @@
 extends Control
 
-signal item_selected(item_scene: PackedScene, index: int)
+signal item_selected(item: InventoryObject, index: int)
 
 
-@export var items: Array[InventoryObject]
 @export var button_max_size: float = 128
 
 @onready var _buttons_container = $HBoxContainer
 @onready var _description = $PanelContainer
+
+var _inventory: IterationInventory
 
 
 func take_item(index: int) -> void:
 	_buttons_container.get_child(index).visible = false
 
 
+func place_item(item: InventoryObject) -> void:
+	_inventory.items.push_back(item)
+	_create_button(item, _inventory.items.size() - 1)
+
+
 func untake_item(index: int) -> void:
 	_buttons_container.get_child(index).visible = true
 
 
-func _ready() -> void:
-	for item in items:
-		var button = TextureButton.new()
-		button.custom_maximum_size = Vector2(button_max_size, button_max_size)
-		button.texture_normal = item.inventory_image
-		button.texture_hover = item.inventory_image
-		button.texture_pressed = item.inventory_image
-		button.texture_focused = item.inventory_image
-		button.texture_disabled = item.inventory_image
-		button.stretch_mode = TextureButton.STRETCH_SCALE
+func set_inventory(inventory: IterationInventory) -> void:
+	_inventory = inventory
 
-		_buttons_container.add_child(button)
-
-	var i: int = 0
-	for button in _buttons_container.get_children():
-		button.pressed.connect(func ():
-			item_selected.emit(items[i].placeable_object, i)
-		)
-
-		button.mouse_entered.connect(func ():
-			_set_description(i)
-			_description.visible = true
-		)
-
-		button.mouse_exited.connect(func ():
-			_description.visible = false
-		)
-
+	var i = 0
+	for item in _inventory.items:
+		_create_button(item, i)
 		i += 1
+
+func clear() -> void:
+	for button in _buttons_container.get_children():
+		button.queue_free()
 
 
 func _input(event: InputEvent) -> void:
@@ -57,6 +45,32 @@ func _input(event: InputEvent) -> void:
 	_description.global_position.y -= _description.size.y
 
 
-func _set_description(index: int) -> void:
-	%Title.text = "[wave amp=30.0 freq=5.0 connected=1]" + items[index].title + "[/wave]"
-	%Description.text = items[index].description
+func _set_description(item: InventoryObject) -> void:
+	%Title.text = "[wave amp=30.0 freq=5.0 connected=1]" + item.title + "[/wave]"
+	%Description.text = item.description
+
+
+func _create_button(item: InventoryObject, index: int) -> void:
+	var button = TextureButton.new()
+	button.custom_maximum_size = Vector2(button_max_size, button_max_size)
+	button.texture_normal = item.inventory_image
+	button.texture_hover = item.inventory_image
+	button.texture_pressed = item.inventory_image
+	button.texture_focused = item.inventory_image
+	button.texture_disabled = item.inventory_image
+	button.stretch_mode = TextureButton.STRETCH_SCALE
+
+	button.pressed.connect(func ():
+		item_selected.emit(item, index)
+	)
+
+	button.mouse_entered.connect(func ():
+		_set_description(item)
+		_description.visible = true
+	)
+
+	button.mouse_exited.connect(func ():
+		_description.visible = false
+	)
+
+	_buttons_container.add_child(button)

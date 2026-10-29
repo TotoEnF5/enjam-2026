@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IterationInventory" format=3 uid="uid://b1n1ci4y2gsi1"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_vuyxs"]
+[ext_resource type="Script" uid="uid://bhgyebr222u8t" path="res://resources/iteration_inventory.gd" id="2_bl1ic"]
+[ext_resource type="Resource" uid="uid://gnb00jgwic64" path="res://resources/items/wilson.tres" id="2_phd3g"]
+
+[resource]
+script = ExtResource("2_bl1ic")
+items = Array[ExtResource("1_vuyxs")]([ExtResource("2_phd3g"), ExtResource("2_phd3g"), ExtResource("2_phd3g")])
+metadata/_custom_type_script = "uid://bhgyebr222u8t"
