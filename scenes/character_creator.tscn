@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpn7n6tlvmt6p"]
 
 [ext_resource type="Script" uid="uid://cxlkdd1k8618h" path="res://scripts/character_creator.gd" id="1_tvdat"]
+[ext_resource type="Material" uid="uid://b32xdoeber8m1" path="res://assets/Material/new_shader_material2.tres" id="2_ja2xc"]
 
 [node name="CharacterCreator" type="Control" unique_id=1868958802]
 layout_mode = 3
@@ -10,6 +11,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tvdat")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1760950879]
+material = ExtResource("2_ja2xc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=816003633]
 layout_mode = 1
@@ -25,6 +35,18 @@ offset_bottom = 85.5
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer" unique_id=641526139]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1]Qui es-tu ?[/wave]"
+fit_content = true
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=331988225]
 layout_mode = 2

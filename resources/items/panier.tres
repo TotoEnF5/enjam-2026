@@ -10,4 +10,5 @@ inventory_image = ExtResource("1_3wdqe")
 placeable_object = ExtResource("1_p4hbi")
 title = "Axel"
 description = "Dites bonjour à mon potit chat ! [wave amp=20.0 freq=5.0 connected=1]\"Miaou !\"[/wave]"
+on_etagere = false
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

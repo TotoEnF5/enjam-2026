@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://0q7gcx8h0wjg"]
 
 [ext_resource type="Script" uid="uid://cnklsegp6n0ik" path="res://scenes/paint/paint_control.gd" id="1"]
+[ext_resource type="Material" uid="uid://b32xdoeber8m1" path="res://assets/Material/new_shader_material2.tres" id="1_7ie0u"]
 [ext_resource type="Script" uid="uid://dum5j5wu6quna" path="res://scenes/paint/tools_panel.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://cdp7qdy78juas" path="res://scenes/paint/paint_tools.png" id="3"]
 
@@ -28,6 +29,15 @@ region = Rect2(16, 16, 16, 16)
 
 [node name="PaintRoot" type="Control" unique_id=1932738941]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=32255666]
+material = ExtResource("1_7ie0u")
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

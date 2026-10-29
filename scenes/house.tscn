@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://d22bju6erbjg5" path="res://resources/inventories/inventory_0.tres" id="3_bwc8c"]
 [ext_resource type="PackedScene" uid="uid://duo44oo3kqxdl" path="res://scenes/snap_point.tscn" id="3_wcu0q"]
 [ext_resource type="PackedScene" uid="uid://tl12l6wootjk" path="res://scenes/object_mover.tscn" id="4_bwc8c"]
+[ext_resource type="Resource" uid="uid://b1n1ci4y2gsi1" path="res://resources/inventories/inventory_1.tres" id="4_mhx8p"]
 [ext_resource type="PackedScene" uid="uid://d0rn6cil0ft5g" path="res://assets/Models/Piece.glb" id="5_bwc8c"]
 [ext_resource type="PackedScene" uid="uid://beye3r8f266w0" path="res://scenes/hud.tscn" id="5_mhx8p"]
 [ext_resource type="PackedScene" uid="uid://c5d572kpuau7p" path="res://scenes/inventory.tscn" id="6_65la3"]
@@ -15,10 +16,14 @@
 [ext_resource type="PackedScene" uid="uid://d16ewh1jxbw4" path="res://assets/Models/Chaise.gltf" id="9_3853c"]
 [ext_resource type="PackedScene" uid="uid://bwu0ardtagdky" path="res://assets/Models/meubleTV.gltf" id="10_3853c"]
 [ext_resource type="PackedScene" uid="uid://ceow1mavoxtd8" path="res://assets/Models/table de chevet.gltf" id="11_bhgw4"]
+[ext_resource type="Material" uid="uid://bi8ub8jdfak4s" path="res://assets/Material/new_shader_material.tres" id="16_3ewhn"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_c6agx"]
+size = Vector2(100, 100)
 
 [node name="House" type="Node3D" unique_id=53535480]
 script = ExtResource("1_ptc3g")
-inventories = Array[ExtResource("2_wcu0q")]([ExtResource("3_bwc8c")])
+inventories = Array[ExtResource("2_wcu0q")]([ExtResource("3_bwc8c"), ExtResource("4_mhx8p")])
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1908228732]
 transform = Transform3D(-0.70710677, -0.25915548, 0.65790457, 0, 0.9304176, 0.3665012, -0.70710677, 0.25915548, -0.65790457, 14.69, 11.006, -16.331)
@@ -161,14 +166,13 @@ camera = NodePath("../Camera3D")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1379798987]
 
-[node name="HUD" parent="CanvasLayer" unique_id=928920586 instance=ExtResource("5_mhx8p")]
-visible = false
-
 [node name="Inventory" parent="CanvasLayer" unique_id=1890128205 instance=ExtResource("6_65la3")]
 anchors_preset = 7
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
+
+[node name="HUD" parent="CanvasLayer" unique_id=928920586 instance=ExtResource("5_mhx8p")]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1517012415]
 anchors_preset = 15
@@ -178,5 +182,12 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1649867705]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -20, 0, 20)
+material_override = ExtResource("16_3ewhn")
+material_overlay = ExtResource("16_3ewhn")
+mesh = SubResource("QuadMesh_c6agx")
+surface_material_override/0 = ExtResource("16_3ewhn")
 
 [connection signal="item_selected" from="CanvasLayer/Inventory" to="." method="_on_inventory_item_selected"]

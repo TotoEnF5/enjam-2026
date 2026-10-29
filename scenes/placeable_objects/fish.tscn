@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d28be6x15arla"]
+
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_wqyfe"]
+[ext_resource type="PackedScene" uid="uid://cnusrce8hd1iq" path="res://assets/Models/fish.gltf" id="2_oe6wo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1.6278687, 0.59124756, 1.7827148)
+
+[node name="Fish" type="Node3D" unique_id=1033664912]
+script = ExtResource("1_wqyfe")
+
+[node name="fish" parent="." unique_id=2110436687 instance=ExtResource("2_oe6wo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.879117, 0, 0.98418474)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=877712490]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=481193101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11953735, 0.27749634, 0.13842773)
+shape = SubResource("BoxShape3D_c6agx")

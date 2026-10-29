@@ -1,0 +1,21 @@
+{
+  "asset": { "version": "2.0" },
+  "scene": 0,
+  "scenes": [{ "nodes": [0,1,2] }],
+  "nodes": [{"mesh":0},{"mesh":1},{"mesh":2}],
+  "meshes": [{"primitives":[{"attributes":{"POSITION":0,"TEXCOORD_0":1},"indices":2,"material":0}]},{"primitives":[{"attributes":{"POSITION":3,"TEXCOORD_0":4},"indices":5,"material":0}]},{"primitives":[{"attributes":{"POSITION":6,"TEXCOORD_0":7},"indices":8,"material":0}]}],
+  "materials": [{
+    "name" : "fish",
+    "pbrMetallicRoughness": {
+      "baseColorTexture": { "index": 0 },
+      "metallicFactor": 0.0,
+      "roughnessFactor": 1.0
+    }
+  }],
+  "samplers": [{ "magFilter": 9728, "minFilter": 9728 }],
+  "textures": [{ "source": 0, "sampler": 0 }],
+  "images": [{ "uri": "fish.png" }],
+  "accessors": [{"bufferView":0,"byteOffset":0,"componentType":5126,"count":156,"type":"VEC3","min":[0.25,1.5308085e-17,-1.75],"max":[1.75,0.5,-0]},{"bufferView":1,"byteOffset":0,"componentType":5126,"count":156,"type":"VEC2"},{"bufferView":2,"byteOffset":0,"componentType":5123,"count":156,"type":"SCALAR"},{"bufferView":3,"byteOffset":0,"componentType":5126,"count":12,"type":"VEC3","min":[0.75,0,-1],"max":[1,0,-0.5]},{"bufferView":4,"byteOffset":0,"componentType":5126,"count":12,"type":"VEC2"},{"bufferView":5,"byteOffset":0,"componentType":5123,"count":12,"type":"SCALAR"},{"bufferView":6,"byteOffset":0,"componentType":5126,"count":12,"type":"VEC3","min":[0.75,0.5,-1.25],"max":[1,0.5,-0.75]},{"bufferView":7,"byteOffset":0,"componentType":5126,"count":12,"type":"VEC2"},{"bufferView":8,"byteOffset":0,"componentType":5123,"count":12,"type":"SCALAR"}],
+  "bufferViews": [{"buffer":0,"byteOffset":0,"byteLength":1872,"target":34962},{"buffer":0,"byteOffset":1872,"byteLength":1248,"target":34962},{"buffer":0,"byteOffset":3120,"byteLength":312,"target":34963},{"buffer":0,"byteOffset":3432,"byteLength":144,"target":34962},{"buffer":0,"byteOffset":3576,"byteLength":96,"target":34962},{"buffer":0,"byteOffset":3672,"byteLength":24,"target":34963},{"buffer":0,"byteOffset":3696,"byteLength":144,"target":34962},{"buffer":0,"byteOffset":3840,"byteLength":96,"target":34962},{"buffer":0,"byteOffset":3936,"byteLength":24,"target":34963}],
+  "buffers": [{ "uri": "fish.bin", "byteLength": 3960 }]
+}

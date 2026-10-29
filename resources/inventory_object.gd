@@ -19,7 +19,9 @@ enum Hobby {
 @export var inventory_image: Texture2D
 @export var placeable_object: PackedScene
 @export var hobby: Hobby
-@export var title: String
+@export var title: String:
+	set(value):
+		title = "[b]" + value + "[/b]"
 @export_multiline var description: String:
 	set(value):
 		description = _replace_desc(value)

@@ -9,6 +9,17 @@ signal item_selected(item: InventoryObject, index: int)
 @onready var _description = $PanelContainer
 
 var _inventory: IterationInventory
+var _inventory_hover: bool = false
+
+
+func item_hovered(item: InventoryObject) -> void:
+	_set_description(item)
+	_description.visible = true
+
+
+func item_not_hovered() -> void:
+	if not _inventory_hover:
+		_description.visible = false
 
 
 func take_item(index: int) -> void:
@@ -68,11 +79,13 @@ func _create_button(item: InventoryObject, index: int) -> void:
 	)
 
 	button.mouse_entered.connect(func ():
+		_inventory_hover = true
 		_set_description(item)
 		_description.visible = true
 	)
 
 	button.mouse_exited.connect(func ():
+		_inventory_hover = false
 		_description.visible = false
 	)
 

@@ -42,6 +42,11 @@ func _input(event: InputEvent) -> void:
 						var mouse_pos = get_viewport().get_mouse_position()
 						var pos = camera.project_ray_origin(mouse_pos)
 						_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 10
+		else:
+			if _targeted_object != null:
+				inventory.item_hovered(_targeted_object.item)
+			else:
+				inventory.item_not_hovered()
 
 
 	if event is InputEventMouseButton:

@@ -14,7 +14,7 @@ var _current_iteration: int = 0
 
 func _ready() -> void:
 	_inventory.set_inventory(inventories[_current_iteration])
-	_hud.get_node("Button").pressed.connect(_go_to_next_iteration)
+	_hud.oui_pressed.connect(_go_to_next_iteration)
 
 
 func _go_to_next_iteration() -> void:

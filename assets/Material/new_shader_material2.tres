@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b32xdoeber8m1"]
+
+[ext_resource type="Shader" uid="uid://btwnrb317uxa4" path="res://assets/shaders/background_control.gdshader" id="1_nue4c"]
+
+[resource]
+shader = ExtResource("1_nue4c")
+shader_parameter/u_speed = 0.1
+shader_parameter/u_color_low = Color(0.0051549, 0.27042562, 0.33875263, 1)
+shader_parameter/u_color_mid_red = Color(0.30342433, 0.04457151, 0.17439362, 1)
+shader_parameter/u_color_high = Color(0.7162962, 0.7162962, 0.7162962, 1)
