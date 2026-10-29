@@ -47,6 +47,7 @@ fov = 55.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D2" unique_id=1077765453]
 transform = Transform3D(0.9999999, -7.450581e-09, 0, -1.4901161e-08, 0.99999976, 2.9802322e-08, -5.9604645e-08, 0, 0.9999998, -0.33026028, 0.06957722, -0.4777527)
+visible = false
 mesh = SubResource("QuadMesh_gq8w2")
 
 [node name="Window" parent="Camera3D2" unique_id=680119305 instance=ExtResource("7_d2ikl")]
