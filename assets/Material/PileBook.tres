@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btcavmqij7ibn"]
+
+[ext_resource type="Texture2D" uid="uid://c86mf67olki74" path="res://assets/Models/PileBook.png" id="1_6g3bx"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_6g3bx")
+texture_filter = 0
