@@ -2,26 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cvgr1mucyhthv" path="res://scripts/main_menu.gd" id="1_d1rr7"]
 [ext_resource type="Script" uid="uid://bhb82fdvhjsbv" path="res://scripts/button.gd" id="2_d1rr7"]
-[ext_resource type="FontFile" uid="uid://clgryhs50yo87" path="res://assets/Font/Modern Pixels.ttf" id="3_3tmrh"]
 [ext_resource type="PackedScene" uid="uid://dilrguime6ts1" path="res://scenes/particle_mm.tscn" id="3_ow2sg"]
-[ext_resource type="PackedScene" uid="uid://dutt0h8xgqij1" path="res://assets/Models/MeubleTiroir.glb" id="4_qtdab"]
-[ext_resource type="PackedScene" uid="uid://cd870eu6isdvw" path="res://assets/Models/Tiroir.glb" id="5_610dt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddug4"]
 bg_color = Color(0.7344132, 0.5156983, 0.70600116, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_d1rr7"]
 viewport_path = NodePath("SubViewportContainer/SubViewport")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_610dt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tmrh"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvwki"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2w1r8"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q4q5n"]
 
 [sub_resource type="Animation" id="Animation_d1rr7"]
 length = 0.001
@@ -48,150 +35,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Tiroir3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-5.8819194, -31.863062, -7.60393)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Tiroir3:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -0.5695282, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Tiroir2:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -0.5695282, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Tiroir2:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-5.8819194, -32.839752, -7.60393)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Tiroir:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-5.8819194, -33.818977, -7.60393)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Tiroir:rotation")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -0.5695282, 0)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("VBoxContainer/Button_play:offset_transform_position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("VBoxContainer/Button_play:offset_transform_scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("VBoxContainer/Button_credits:offset_transform_position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("VBoxContainer/Button_credits:offset_transform_scale")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("VBoxContainer/Button_quit:offset_transform_position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("VBoxContainer/Button_quit:offset_transform_scale")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ow2sg"]
@@ -222,169 +65,10 @@ tracks/1/keys = {
 "values": [0.08726646, 0.08726646, -0.08726646259971647, 0.05235987755982989, -0.01745329251994329, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_cvwki"]
-resource_name = "tiroir_bas"
-length = 0.35
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tiroir:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.30061617, 0.35),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-5.8819194, -33.818977, -7.60393), Vector3(-4.627, -33.819, -6.787), Vector3(-4.7012076, -33.818977, -6.7897897)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Tiroir:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.30061617, 0.35),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -0.5695282, 0), Vector3(0.032229114, -0.56973547, -0.085322), Vector3(0, -0.5695282, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("VBoxContainer/Button_quit:offset_transform_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.35),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(60, 0), Vector2(50, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("VBoxContainer/Button_quit:offset_transform_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.35),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1.2, 1.2)]
-}
-
-[sub_resource type="Animation" id="Animation_610dt"]
-resource_name = "tiroir_haut"
-length = 0.35
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tiroir3:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-5.8819194, -31.863062, -7.60393), Vector3(-4.6697226, -31.863062, -6.8187666), Vector3(-4.9492497, -31.863062, -7.014902)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Tiroir3:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -0.5695282, 0), Vector3(0.01827933, -0.57155734, -0.07185433), Vector3(0, -0.5695282, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("VBoxContainer/Button_play:offset_transform_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(60, 0), Vector2(50, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("VBoxContainer/Button_play:offset_transform_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1.2, 1.2)]
-}
-
-[sub_resource type="Animation" id="Animation_3tmrh"]
-resource_name = "tiroir_mid"
-length = 0.35
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tiroir2:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.33333334),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -0.5695282, 0), Vector3(0.033829097, -0.5709218, -0.11062489), Vector3(0, -0.5695282, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Tiroir2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.33333334),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-5.8819194, -32.839752, -7.60393), Vector3(-4.706067, -32.839752, -6.8806596), Vector3(-5.016723, -32.839752, -7.065916)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("VBoxContainer/Button_credits:offset_transform_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.33333334),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(60, 0), Vector2(50, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("VBoxContainer/Button_credits:offset_transform_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.33333334),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1.2, 1.2)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qtdab"]
 _data = {
 &"RESET": SubResource("Animation_d1rr7"),
-&"Spawn_credits": SubResource("Animation_ow2sg"),
-&"tiroir_bas": SubResource("Animation_cvwki"),
-&"tiroir_haut": SubResource("Animation_610dt"),
-&"tiroir_mid": SubResource("Animation_3tmrh")
+&"Spawn_credits": SubResource("Animation_ow2sg")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gq8w2"]
@@ -397,7 +81,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 script = ExtResource("1_d1rr7")
 anim = NodePath("AnimationPlayer")
 
@@ -407,7 +90,6 @@ offset_left = 1710.0
 offset_top = 321.0
 offset_right = 3630.0
 offset_bottom = 1401.0
-mouse_filter = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1777868754]
 handle_input_locally = false
@@ -427,7 +109,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ddug4")
 
 [node name="TextureRect" type="TextureRect" parent="BG" unique_id=1105000136]
@@ -444,53 +125,24 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 150.0
+offset_left = 50.0
 offset_top = -248.0
-offset_right = 350.0
+offset_right = 250.0
 offset_bottom = -48.0
 grow_vertical = 0
-mouse_filter = 2
-theme_override_constants/separation = 50
 
 [node name="Button_play" type="Button" parent="VBoxContainer" unique_id=371686126]
 layout_mode = 2
-offset_transform_enabled = true
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("3_3tmrh")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_610dt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_3tmrh")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_cvwki")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_2w1r8")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_q4q5n")
 text = "JOUER"
 script = ExtResource("2_d1rr7")
 
 [node name="Button_credits" type="Button" parent="VBoxContainer" unique_id=1039396264]
 layout_mode = 2
-offset_transform_enabled = true
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("3_3tmrh")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_610dt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_3tmrh")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_cvwki")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_2w1r8")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_q4q5n")
-text = "CREDITS"
+text = "CRÉDITS"
 script = ExtResource("2_d1rr7")
 
 [node name="Button_quit" type="Button" parent="VBoxContainer" unique_id=1958949804]
 layout_mode = 2
-offset_transform_enabled = true
-theme_override_constants/outline_size = 20
-theme_override_fonts/font = ExtResource("3_3tmrh")
-theme_override_font_sizes/font_size = 0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_610dt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_3tmrh")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_cvwki")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_2w1r8")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_q4q5n")
 text = "QUITTER"
 script = ExtResource("2_d1rr7")
 
@@ -601,26 +253,7 @@ grow_horizontal = 0
 text = "X"
 expand_icon = true
 
-[node name="MeubleTiroir" parent="." unique_id=1800562585 instance=ExtResource("4_qtdab")]
-transform = Transform3D(0.8423618, 0, -0.53891236, 0, 1, 0, 0.53891236, 0, 0.8423618, -6.192812, -33.851448, -7.711992)
-
-[node name="Tiroir" parent="." unique_id=1652340633 instance=ExtResource("5_610dt")]
-transform = Transform3D(0.84215546, 0, -0.53923476, 0, 1.0000001, 0, 0.5392348, 0, 0.84215534, -5.8819194, -33.818977, -7.60393)
-
-[node name="Tiroir2" parent="." unique_id=74361720 instance=ExtResource("5_610dt")]
-transform = Transform3D(0.84215546, 0, -0.5392348, 0, 1, 0, 0.5392348, 0, 0.84215546, -5.8819194, -32.839752, -7.60393)
-
-[node name="Tiroir3" parent="." unique_id=162251424 instance=ExtResource("5_610dt")]
-transform = Transform3D(0.84215546, 0, -0.53923476, 0, 0.99999994, 0, 0.5392348, 0, 0.84215534, -5.8819194, -31.863062, -7.60393)
-
-[connection signal="focus_entered" from="VBoxContainer/Button_play" to="." method="_on_button_play_focus_entered"]
-[connection signal="mouse_entered" from="VBoxContainer/Button_play" to="." method="_on_button_play_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/Button_play" to="." method="_on_button_play_mouse_exited"]
 [connection signal="pressed" from="VBoxContainer/Button_play" to="." method="_on_button_play_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/Button_credits" to="." method="_on_button_credits_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/Button_credits" to="." method="_on_button_credits_mouse_exited"]
 [connection signal="pressed" from="VBoxContainer/Button_credits" to="." method="_on_button_credits_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/Button_quit" to="." method="_on_button_quit_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/Button_quit" to="." method="_on_button_quit_mouse_exited"]
 [connection signal="pressed" from="VBoxContainer/Button_quit" to="." method="_on_button_quit_pressed"]
 [connection signal="pressed" from="Credits/Button" to="." method="_on_button_pressed"]

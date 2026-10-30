@@ -2,12 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_vuyxs"]
 [ext_resource type="Script" uid="uid://bhgyebr222u8t" path="res://resources/iteration_inventory.gd" id="2_bl1ic"]
-[ext_resource type="Resource" uid="uid://c7wr4l8jxi7tc" path="res://resources/items/panier.tres" id="2_eerty"]
-[ext_resource type="Resource" uid="uid://dpf0bngbji51h" path="res://resources/items/aquarium_poisson.tres" id="2_vtdkf"]
-[ext_resource type="Resource" uid="uid://br4t1rncipsar" path="res://resources/items/litiere.tres" id="3_ombf6"]
-[ext_resource type="Resource" uid="uid://b0d80h6s2qrwi" path="res://resources/items/fish.tres" id="4_be7v7"]
+[ext_resource type="Resource" uid="uid://4nhpo0t26wa2" path="res://resources/items/chat_moche.tres" id="2_phd3g"]
 
 [resource]
 script = ExtResource("2_bl1ic")
-items = Array[ExtResource("1_vuyxs")]([ExtResource("2_eerty"), ExtResource("3_ombf6"), ExtResource("4_be7v7"), ExtResource("2_vtdkf")])
+items = Array[ExtResource("1_vuyxs")]([ExtResource("2_phd3g")])
 metadata/_custom_type_script = "uid://bhgyebr222u8t"

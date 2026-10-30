@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b8kxfx3n7i0at"]
 
-[ext_resource type="Texture2D" uid="uid://0b1i4sryhsg3" path="res://assets/Models/MeubleTiroir_ENJAM.png" id="1_xcr74"]
+[ext_resource type="Texture2D" uid="uid://d2srhyxo1rnda" path="res://assets/Models/PlanDeTravail_ENJAM.png" id="1_xcr74"]
 
 [resource]
 cull_mode = 2

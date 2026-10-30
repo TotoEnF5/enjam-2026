@@ -2,9 +2,6 @@ extends Control
 @export var anim : AnimationPlayer
 
 var cred : bool = false
-var t_haut : bool = false
-var t_mid : bool = false
-var t_bas : bool = false
 
 
 func _ready() -> void:
@@ -16,12 +13,9 @@ func _on_button_play_pressed() -> void:
 
 
 func _on_button_credits_pressed() -> void:
-	if cred == false :
-		anim.play("Spawn_credits")
-		cred = true
-	elif cred == true :
-		anim.play_backwards("Spawn_credits")
-		cred = false
+	#if
+	anim.play("Spawn_credits")
+
 	pass # Replace with function body.
 
 
@@ -32,39 +26,5 @@ func _on_button_quit_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	anim.play_backwards("Spawn_credits")
-	cred = false
-	pass # Replace with function body.
 
-
-func _on_button_play_mouse_entered() -> void:
-	if t_haut == false :
-		anim.play("tiroir_haut")
-		t_haut = true
-	pass # Replace with function body.
-
-
-func _on_button_play_mouse_exited() -> void:
-	if t_haut == true :
-		anim.play_backwards("tiroir_haut")
-		t_haut = false
-	pass # Replace with function body.
-
-
-func _on_button_credits_mouse_entered() -> void:
-	anim.play("tiroir_mid")
-	pass # Replace with function body.
-
-
-func _on_button_credits_mouse_exited() -> void:
-	anim.play_backwards("tiroir_mid")
-	pass # Replace with function body.
-
-
-func _on_button_quit_mouse_entered() -> void:
-	anim.play("tiroir_bas")
-	pass # Replace with function body.
-
-
-func _on_button_quit_mouse_exited() -> void:
-	anim.play_backwards("tiroir_bas")
 	pass # Replace with function body.

@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://4nhpo0t26wa2"]
 
 [ext_resource type="PackedScene" uid="uid://8qsgengixgay" path="res://scenes/placeable_objects/chat_moche.tscn" id="1_jmgtq"]
+[ext_resource type="Texture2D" uid="uid://b2uiqldjery75" path="res://assets/textures/wilson.jpg" id="1_tv7y2"]
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_ulvcn"]
 
 [resource]
 script = ExtResource("1_ulvcn")
+inventory_image = ExtResource("1_tv7y2")
 placeable_object = ExtResource("1_jmgtq")
 title = "Moumoune"
 description = "Je ne suis pas sûr.e si [Prénom] était marié.e, [Pronom] vivait seul.e. Ça ne m'aurait pas étonné qu'[Pronom] l'ait volée quelque part ou alors sa vie était plus mystérieuse que ce que je pensais."

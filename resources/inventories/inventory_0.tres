@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="IterationInventory" format=3 uid="uid://d22bju6erbjg5"]
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_akiyo"]
-[ext_resource type="Resource" uid="uid://cjh4q6fp4f10d" path="res://resources/items/urne.tres" id="2_l37ns"]
 [ext_resource type="Script" uid="uid://bhgyebr222u8t" path="res://resources/iteration_inventory.gd" id="2_tvn4h"]
 [ext_resource type="Resource" uid="uid://4nhpo0t26wa2" path="res://resources/items/chat_moche.tres" id="2_wksgd"]
-[ext_resource type="Resource" uid="uid://bwarnav0rcxuv" path="res://resources/items/plante.tres" id="4_hxdc7"]
-[ext_resource type="Resource" uid="uid://md8njyarhxww" path="res://resources/items/cane.tres" id="5_ieyme"]
+[ext_resource type="Resource" uid="uid://c7wr4l8jxi7tc" path="res://resources/items/panier.tres" id="3_wksgd"]
+[ext_resource type="Resource" uid="uid://bq857udcs1k1e" path="res://resources/items/aquarium.tres" id="4_smi7m"]
+[ext_resource type="Resource" uid="uid://b0d80h6s2qrwi" path="res://resources/items/fish.tres" id="5_l37ns"]
 
 [resource]
 script = ExtResource("2_tvn4h")
-items = Array[ExtResource("1_akiyo")]([ExtResource("2_l37ns"), ExtResource("2_wksgd"), ExtResource("4_hxdc7"), ExtResource("5_ieyme")])
+items = Array[ExtResource("1_akiyo")]([ExtResource("2_wksgd"), ExtResource("3_wksgd"), ExtResource("4_smi7m"), ExtResource("5_l37ns")])
 metadata/_custom_type_script = "uid://bhgyebr222u8t"

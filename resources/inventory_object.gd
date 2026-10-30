@@ -21,7 +21,7 @@ enum Hobby {
 @export var hobby: Hobby
 @export var title: String:
 	set(value):
-		title = _replace_desc("[b]" + value + "[/b]")
+		title = "[b]" + value + "[/b]"
 @export_multiline var description: String:
 	set(value):
 		description = _replace_desc(value)
@@ -34,7 +34,7 @@ enum Hobby {
 func _init(texture: Texture2D = null, object: PackedScene = null, _title: String = "Title", _description: String = "Description") -> void:
 	inventory_image = texture
 	placeable_object = object
-	title = _replace_desc(_title)
+	title = _title
 	description = _replace_desc(_description)
 	
 

@@ -1,19 +1,7 @@
 [gd_scene format=3 uid="uid://c3jpj77as7vwi"]
 
 [ext_resource type="PackedScene" uid="uid://4186tnin3yu6" path="res://assets/Models/AquariumAvecPoisson.gltf" id="1_8iwqw"]
-[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_n163d"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
-size = Vector3(3.001587, 1.8190918, 5.5390625)
 
 [node name="AquariumFish" type="Node3D" unique_id=1915802117]
-script = ExtResource("1_n163d")
 
 [node name="AquariumAvecPoisson" parent="." unique_id=1450601294 instance=ExtResource("1_8iwqw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9827738, 0, 2.9650652)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=672986148]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1749504194]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030578613, 0.881958, -0.03125)
-shape = SubResource("BoxShape3D_c6agx")
