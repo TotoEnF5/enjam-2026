@@ -146,7 +146,7 @@ is_floor = false
 is_etagere = true
 
 [node name="SnapPoint19" parent="Snappers" unique_id=1183209974 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.9922675, 0, -0.12411755, 0, 1, 0, 0.12411755, 0, 0.9922675, -8.885092, 8.05642, -6.6469254)
+transform = Transform3D(-0.15565182, 0, -0.987812, 0, 1, 0, 0.987812, 0, -0.15565182, -8.885092, 8.05642, -6.6469254)
 is_floor = false
 is_etagere = true
 

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://oo60lyj8xfxs"]
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_2hyo3"]
-[ext_resource type="Texture2D" uid="uid://dc3yv8vmuwwe7" path="res://assets/textures/thumbnails/dentier.png" id="1_5pol2"]
+[ext_resource type="Texture2D" uid="uid://c5qhha3gwk8pl" path="res://assets/textures/thumbnails/dentier_normal.png" id="1_5pol2"]
 [ext_resource type="PackedScene" uid="uid://cpe77y0v5y2mk" path="res://scenes/placeable_objects/dentier.tscn" id="2_ceuha"]
 
 [resource]
