@@ -11,7 +11,7 @@ script = ExtResource("1_m2dua")
 inventory_image = ExtResource("1_8j5vj")
 placeable_object = ExtResource("2_7f1rd")
 title = "Aquarium"
-description = "Il est rempli d'algues et fissuré, mais il fau goût de notre poisson : [shake rate=20.0 level=5 connected=1]Buendia[/shake]."
+description = "Il est rempli d'algues et fissuré, mais il est au goût de notre poisson : [shake rate=20.0 level=5 connected=1]Buendia[/shake]."
 on_etagere = false
 place_audio_streams = ExtResource("2_aw4vq")
 yeet_audio_streams = ExtResource("4_7f1rd")
