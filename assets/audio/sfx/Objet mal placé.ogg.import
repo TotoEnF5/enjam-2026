@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccipn7vyejyhe"
+path="res://.godot/imported/Objet mal placé.ogg-fd525c009481c2efd2734f41c455a155.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Objet mal placé.ogg"
+dest_files=["res://.godot/imported/Objet mal placé.ogg-fd525c009481c2efd2734f41c455a155.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

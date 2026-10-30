@@ -1,0 +1,20 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://byxl1he4rejis"]
+
+[ext_resource type="AudioStream" uid="uid://ybseuftc5ukv" path="res://assets/audio/sfx/Chat_normal-01.wav" id="1_qnsy0"]
+[ext_resource type="AudioStream" uid="uid://datsvrgnb6h42" path="res://assets/audio/sfx/Chat_normal-02.wav" id="2_d5bec"]
+[ext_resource type="AudioStream" uid="uid://cny1eb6eo5eku" path="res://assets/audio/sfx/Chat_normal-03.wav" id="3_5a3m0"]
+[ext_resource type="AudioStream" uid="uid://cnb2vqfbyexht" path="res://assets/audio/sfx/Chat_normal-04.wav" id="4_w6e3o"]
+[ext_resource type="AudioStream" uid="uid://4xxjigq8vwwj" path="res://assets/audio/sfx/Chat_normal-05.wav" id="5_13om0"]
+[ext_resource type="AudioStream" uid="uid://d3oenyfiunxcr" path="res://assets/audio/sfx/Chat_normal-06.wav" id="6_y2l03"]
+[ext_resource type="AudioStream" uid="uid://ba0gn2bmbic5b" path="res://assets/audio/sfx/Chat_normal-07.wav" id="7_ww7pj"]
+
+[resource]
+random_pitch = 1.2599211
+streams_count = 7
+stream_0/stream = ExtResource("1_qnsy0")
+stream_1/stream = ExtResource("2_d5bec")
+stream_2/stream = ExtResource("3_5a3m0")
+stream_3/stream = ExtResource("4_w6e3o")
+stream_4/stream = ExtResource("5_13om0")
+stream_5/stream = ExtResource("6_y2l03")
+stream_6/stream = ExtResource("7_ww7pj")

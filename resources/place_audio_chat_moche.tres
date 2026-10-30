@@ -1,0 +1,24 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://8uwu8jvh51ra"]
+
+[ext_resource type="AudioStream" uid="uid://dllcy4yjtpe34" path="res://assets/audio/sfx/Miaou_moche-01.wav" id="1_l1rb2"]
+[ext_resource type="AudioStream" uid="uid://du3d4p6whrb3k" path="res://assets/audio/sfx/Miaou_moche-02.wav" id="2_4x4p1"]
+[ext_resource type="AudioStream" uid="uid://caac2xg784tqw" path="res://assets/audio/sfx/Miaou_moche-03.wav" id="3_8ogvd"]
+[ext_resource type="AudioStream" uid="uid://bbyoclp8rlcsm" path="res://assets/audio/sfx/Miaou_moche-04.wav" id="4_dupll"]
+[ext_resource type="AudioStream" uid="uid://cwuhr0t3nqpqi" path="res://assets/audio/sfx/Miaou_moche-05.wav" id="5_a7b0q"]
+[ext_resource type="AudioStream" uid="uid://c8dj86ypqwrkw" path="res://assets/audio/sfx/Miaou_moche-06.wav" id="6_lluis"]
+[ext_resource type="AudioStream" uid="uid://b4g1skaq6b1oh" path="res://assets/audio/sfx/Miaou_moche-07.wav" id="7_owuss"]
+[ext_resource type="AudioStream" uid="uid://sj8ih4necwo4" path="res://assets/audio/sfx/Vomi_Chat-01.wav" id="8_77kdq"]
+[ext_resource type="AudioStream" uid="uid://bk2sgyhwgu7y7" path="res://assets/audio/sfx/Vomi_Chat-02.wav" id="9_t47a3"]
+
+[resource]
+random_pitch = 1.2599211
+streams_count = 9
+stream_0/stream = ExtResource("1_l1rb2")
+stream_1/stream = ExtResource("2_4x4p1")
+stream_2/stream = ExtResource("3_8ogvd")
+stream_3/stream = ExtResource("4_dupll")
+stream_4/stream = ExtResource("5_a7b0q")
+stream_5/stream = ExtResource("6_lluis")
+stream_6/stream = ExtResource("7_owuss")
+stream_7/stream = ExtResource("8_77kdq")
+stream_8/stream = ExtResource("9_t47a3")

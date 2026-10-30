@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_iwt1e"]
 [ext_resource type="Texture2D" uid="uid://cacxvihjkf5j0" path="res://assets/Models/AquariumAvecPoisson.png" id="1_s1tbr"]
 [ext_resource type="PackedScene" uid="uid://c3jpj77as7vwi" path="res://scenes/placeable_objects/aquarium_fish.tscn" id="2_eawvh"]
+[ext_resource type="AudioStream" uid="uid://cprfajem6wy1q" path="res://resources/place_audio_poisson.tres" id="2_xrmf0"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_eawvh"]
 
 [resource]
 script = ExtResource("1_iwt1e")
@@ -10,4 +12,6 @@ inventory_image = ExtResource("1_s1tbr")
 placeable_object = ExtResource("2_eawvh")
 title = "AQUATIUM_POISSON"
 description = "aquarium poisson"
+place_audio_streams = ExtResource("2_xrmf0")
+yeet_audio_streams = ExtResource("4_eawvh")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

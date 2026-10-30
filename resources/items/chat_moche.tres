@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://4nhpo0t26wa2"]
 
 [ext_resource type="PackedScene" uid="uid://8qsgengixgay" path="res://scenes/placeable_objects/chat_moche.tscn" id="1_jmgtq"]
+[ext_resource type="AudioStream" uid="uid://8uwu8jvh51ra" path="res://resources/place_audio_chat_moche.tres" id="1_mlx23"]
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_ulvcn"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="3_tv7y2"]
 
 [resource]
 script = ExtResource("1_ulvcn")
 placeable_object = ExtResource("1_jmgtq")
 title = "Moumoune"
 description = "Je ne suis pas sûr.e si [Prénom] était marié.e, [Pronom] vivait seul.e. Ça ne m'aurait pas étonné qu'[Pronom] l'ait volée quelque part ou alors sa vie était plus mystérieuse que ce que je pensais."
+place_audio_streams = ExtResource("1_mlx23")
+yeet_audio_streams = ExtResource("3_tv7y2")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

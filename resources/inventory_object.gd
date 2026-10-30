@@ -30,6 +30,9 @@ enum Hobby {
 @export var on_etagere: bool = true
 @export var on_wall: bool = false
 
+@export var place_audio_streams: AudioStreamRandomizer = load("res://resources/place_audio.tres")
+@export var yeet_audio_streams: AudioStreamRandomizer = load("res://resources/yeet_audio.tres")
+
 
 func _init(texture: Texture2D = null, object: PackedScene = null, _title: String = "Title", _description: String = "Description") -> void:
 	inventory_image = texture

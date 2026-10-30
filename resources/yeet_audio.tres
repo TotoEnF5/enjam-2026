@@ -1,0 +1,18 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://bsupge02tb6ug"]
+
+[ext_resource type="AudioStream" uid="uid://cbw222c3j62sf" path="res://assets/audio/sfx/Cri_Fenetre-01.wav" id="1_dneus"]
+[ext_resource type="AudioStream" uid="uid://jm0n8tf6ewdb" path="res://assets/audio/sfx/Cri_Fenetre-02.wav" id="2_jswtk"]
+[ext_resource type="AudioStream" uid="uid://ciouceoxh7vqi" path="res://assets/audio/sfx/Cri_Fenetre-03.wav" id="3_uvm1y"]
+[ext_resource type="AudioStream" uid="uid://d1a8i21ipkm66" path="res://assets/audio/sfx/Cri_Fenetre-04.wav" id="4_jiq4l"]
+[ext_resource type="AudioStream" uid="uid://1fp7fxi4w8my" path="res://assets/audio/sfx/Cri_Fenetre-05.wav" id="5_bba0e"]
+[ext_resource type="AudioStream" uid="uid://bs6larlvl0dn3" path="res://assets/audio/sfx/Cri_Fenetre-06.wav" id="6_nop6y"]
+
+[resource]
+random_pitch = 1.2599211
+streams_count = 6
+stream_0/stream = ExtResource("1_dneus")
+stream_1/stream = ExtResource("2_jswtk")
+stream_2/stream = ExtResource("3_uvm1y")
+stream_3/stream = ExtResource("4_jiq4l")
+stream_4/stream = ExtResource("5_bba0e")
+stream_5/stream = ExtResource("6_nop6y")
