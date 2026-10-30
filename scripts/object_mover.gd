@@ -46,15 +46,22 @@ func _input(event: InputEvent) -> void:
 				_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 10
 			else:
 				if _targeted_snapper != null:
+
+
 					if _targeted_snapper.has_object:
 						var mouse_pos = get_viewport().get_mouse_position()
 						var pos = camera.project_ray_origin(mouse_pos)
 						_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 10
 						return
-
-					if _targeted_snapper.is_poubelle or (_targeted_snapper.is_floor and _current_object.item.on_floor) or (_targeted_snapper.is_etagere and _current_object.item.on_etagere) or (_targeted_snapper.is_wall and _current_object.item.on_wall):
-						_current_object.global_position = _targeted_snapper.global_position
-						_current_object.global_rotation = _targeted_snapper.global_rotation
+						if _targeted_snapper.is_poubelle \
+						or (_targeted_snapper.is_floor \
+						and _current_object.item.on_floor) \
+						or (_targeted_snapper.is_etagere \
+						and _current_object.item.on_etagere) \
+						or (_targeted_snapper.is_wall \
+						and _current_object.item.on_wall):
+							_current_object.global_position = _targeted_snapper.global_position
+							_current_object.global_rotation = _targeted_snapper.global_rotation
 					else:
 						var mouse_pos = get_viewport().get_mouse_position()
 						var pos = camera.project_ray_origin(mouse_pos)
@@ -76,24 +83,33 @@ func _input(event: InputEvent) -> void:
 				_targeted_snapper.has_object = false
 			else:
 				if _targeted_snapper != null:
+
 					if _targeted_snapper.has_object:
 						return
-
-					if _targeted_snapper.is_poubelle:
-						_yeet_audio.stream = _current_object.item.yeet_audio_streams
-						_yeet_audio.play()
-						_current_object.queue_free()
-						_current_object = null
-						_targeted_snapper = null
-					else:
-						_place_audio.stream = _current_object.item.place_audio_streams
-						_place_audio.play()
+					if _targeted_snapper.is_poubelle \
+					or (_targeted_snapper.is_floor \
+					and _current_object.item.on_floor) \
+					or (_targeted_snapper.is_etagere \
+					and _current_object.item.on_etagere) \
+					or (_targeted_snapper.is_wall \
+					and _current_object.item.on_wall):
 						_current_object.global_position = _targeted_snapper.global_position
 						_current_object.global_rotation = _targeted_snapper.global_rotation
-						_current_object.untake()
-						_targeted_snapper.has_object = true
-						_current_object = null
-						_targeted_snapper = null
+						if _targeted_snapper.is_poubelle:
+							_yeet_audio.stream = _current_object.item.yeet_audio_streams
+							_yeet_audio.play()
+							_current_object.queue_free()
+							_current_object = null
+							_targeted_snapper = null
+						else:
+							_place_audio.stream = _current_object.item.place_audio_streams
+							_place_audio.play()
+							_current_object.global_position = _targeted_snapper.global_position
+							_current_object.global_rotation = _targeted_snapper.global_rotation
+							_current_object.untake()
+							_current_object = null
+							_targeted_snapper = null
+					
 
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if _current_object == null:

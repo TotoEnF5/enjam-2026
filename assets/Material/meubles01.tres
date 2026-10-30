@@ -1,6 +1,10 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b8kxfx3n7i0at"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://0b1i4sryhsg3" path="res://assets/Models/MeubleTiroir_ENJAM.png" id="1_xcr74"]
+=======
+[ext_resource type="Texture2D" uid="uid://dmibvdeokano8" path="res://assets/textures/ENJAM_alt.png" id="1_xcr74"]
+>>>>>>> 5cc66e6 (dentier + material alt lit)
 
 [resource]
 cull_mode = 2
