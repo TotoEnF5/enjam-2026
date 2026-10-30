@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://belkys4l6l2mu"]
+
+[ext_resource type="PackedScene" uid="uid://d0m6v11g5mu2h" path="res://assets/Models/Urne.gltf" id="1_045d4"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_nl3g2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1.5734863, 1.9917603, 1.4645996)
+
+[node name="Urne" type="Node3D" unique_id=946386063]
+script = ExtResource("1_nl3g2")
+
+[node name="Urne" parent="." unique_id=1892986170 instance=ExtResource("1_045d4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9641013, 0, 1.0550538)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1200219571]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1048482169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049926758, 0.9866638, 0.05895996)
+shape = SubResource("BoxShape3D_c6agx")
