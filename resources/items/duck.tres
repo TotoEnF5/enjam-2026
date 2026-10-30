@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://cakfvvbdeyhih"]
+
+[ext_resource type="Texture2D" uid="uid://cth3x2ooyw837" path="res://assets/Models/Rubber_duck.png" id="1_0r3f0"]
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_kytyo"]
+[ext_resource type="PackedScene" uid="uid://cmpqhmbcibdc2" path="res://scenes/placeable_objects/duck.tscn" id="2_sf8y5"]
+
+[resource]
+script = ExtResource("1_kytyo")
+inventory_image = ExtResource("1_0r3f0")
+placeable_object = ExtResource("2_sf8y5")
+title = "Canard en plastique de [Prénom]"
+description = "Ce volatile jaunâtre habite souvent les baignoires et les bureaux de programmeurs, autant dire qu'il n'a rien à faire ici sauf à lui trouver une nouvelle utilité."
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
