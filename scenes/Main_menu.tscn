@@ -411,6 +411,7 @@ mouse_filter = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1777868754]
 handle_input_locally = false
+scaling_3d_scale = 0.16666667
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
@@ -506,7 +507,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 48.0
 offset_top = -124.0
-offset_right = 348.00195
+offset_right = 348.0017
 offset_bottom = 276.0
 grow_horizontal = 0
 grow_vertical = 2

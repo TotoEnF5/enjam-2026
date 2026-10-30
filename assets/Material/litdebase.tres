@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dwkch7omukoti"]
+
+[ext_resource type="Texture2D" uid="uid://c7msg71pql5t4" path="res://assets/Models/Lit_ENJAM.png" id="1_4vw0b"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_4vw0b")
+texture_filter = 0

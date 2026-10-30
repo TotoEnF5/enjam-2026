@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cc8l73lxi74qd"]
+
+[ext_resource type="Texture2D" uid="uid://dx4l5aq012pqx" path="res://assets/Models/Dentier_ENJAM.png" id="1_p8qg4"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_p8qg4")
+texture_filter = 0

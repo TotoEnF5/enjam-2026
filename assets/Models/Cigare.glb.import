@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dx54evv7mej3t"
-path="res://.godot/imported/Cadre_photo.glb-5fb79595d825a66785e26169a53df125.scn"
+uid="uid://4jliauswmnkd"
+path="res://.godot/imported/Cigare.glb-868a545fd8a62f8985f224c84a11840d.scn"
 
 [deps]
 
-source_file="res://assets/Models/Cadre_photo.glb"
-dest_files=["res://.godot/imported/Cadre_photo.glb-5fb79595d825a66785e26169a53df125.scn"]
+source_file="res://assets/Models/Cigare.glb"
+dest_files=["res://.godot/imported/Cigare.glb-868a545fd8a62f8985f224c84a11840d.scn"]
 
 [params]
 
@@ -41,10 +41,10 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"ENJAM": {
+"ENJAM.001": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/Material/meubles01.tres",
-"use_external/path": "uid://b8kxfx3n7i0at"
+"use_external/fallback_path": "res://assets/Material/Meubles_2.tres",
+"use_external/path": "uid://bwcqnmc1pvsw7"
 }
 }
 }
