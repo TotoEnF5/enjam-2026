@@ -9,5 +9,5 @@ script = ExtResource("1_2utm6")
 inventory_image = ExtResource("1_hr7w0")
 placeable_object = ExtResource("2_6c0vu")
 title = "Naing de jarding toulousaing de [Prénom]"
-description = "[Prénom] me disait que ce naing a été pris dans le Sud-Est. Je ne sais pas pourquoi, [Pronom] avait un fort accent toulousaing quand [Pronom] me parlait de ce naing."
+description = "[Prénom] me disait que ce naing a été pris dans le Sud-Ouest. Je ne sais pas pourquoi, [Pronom] avait un fort accent toulousaing quand [Pronom] me parlait de ce naing."
 metadata/_custom_type_script = "uid://dlva75r2hqvej"
