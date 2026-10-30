@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://cakfvvbdeyhih"]
 
-[ext_resource type="Texture2D" uid="uid://cth3x2ooyw837" path="res://assets/Models/Rubber_duck.png" id="1_0r3f0"]
+[ext_resource type="Texture2D" uid="uid://dccorhtsko754" path="res://assets/Material/canard.png" id="1_0r3f0"]
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_kytyo"]
 [ext_resource type="PackedScene" uid="uid://cmpqhmbcibdc2" path="res://scenes/placeable_objects/duck.tscn" id="2_sf8y5"]
 

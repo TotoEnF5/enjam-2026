@@ -23,11 +23,11 @@ func _ready() -> void:
 	if Globals.pronouns == "autre chose":
 		_mort.text = "[b][shake rate=20.0 level=50 connected=1]MORT.E[/shake][/b]"
 
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(1).timeout
 	_prenom.visible = true
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
 	_mort.visible = true
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
 	_rip.visible = true
 	_gertrude.visible = true
 	await get_tree().create_timer(1).timeout

@@ -55,7 +55,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.9
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0701299, 0.93579197, 0.52930784)
 
 [node name="Chaise" parent="House" unique_id=1944869977 instance=ExtResource("9_3853c")]
-transform = Transform3D(-0.59136784, 0, 0.8064019, 0, 1, 0, -0.8064019, 0, -0.59136784, 4.673996, 1.0114765, 0.43623945)
+transform = Transform3D(-0.73923445, 0, 0.67344815, 0, 1, 0, -0.67344815, 0, -0.73923445, 4.673996, 1.0114765, 0.43623945)
 
 [node name="meubleTV" parent="House" unique_id=1086646908 instance=ExtResource("10_3853c")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.34518218, 1.388319, -8.365688)
@@ -131,12 +131,12 @@ is_floor = false
 is_wall = true
 
 [node name="SnapPoint25" parent="Snappers" unique_id=1397095543 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.99085957, 0, -0.13490263, 0, 1, 0, 0.13490263, 0, 0.99085957, -2.93958, 10.06735, 8.469463)
+transform = Transform3D(0.18265237, 0, -0.98317826, 0, 1, 0, 0.98317826, 0, 0.18265237, -2.93958, 10.06735, 8.469463)
 is_floor = false
 is_wall = true
 
 [node name="SnapPoint22" parent="Snappers" unique_id=533618146 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.9958719, 0, 0.09077492, 0, 1, 0, -0.09077492, 0, 0.9958719, 6.230008, 9.963909, 8.493095)
+transform = Transform3D(0.19751564, 0, -0.98030025, 0, 1, 0, 0.98030025, 0, 0.19751564, 6.230008, 9.963909, 8.493095)
 is_floor = false
 is_wall = true
 
