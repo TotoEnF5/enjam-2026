@@ -171,7 +171,7 @@ is_floor = false
 is_etagere_petit = true
 
 [node name="SnapPoint8" parent="Snappers/SnapPoint8" unique_id=532807841 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -1.877471, 5.9721594, 0.0068559647)
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -1.877471, 5.714717, 0.0068559647)
 is_floor = false
 is_etagere = true
 
