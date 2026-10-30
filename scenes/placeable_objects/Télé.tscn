@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://djtc10hrd1lim"]
+
+[ext_resource type="PackedScene" uid="uid://b2ous0in4kvxi" path="res://assets/Models/EtagereMurale.glb" id="1_7vdoa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7vdoa"]
+size = Vector3(0.32097816, 1.8751916, 2.751648)
+
+[node name="Télé" type="Node3D" unique_id=689783748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15587795, 0.75518095, 0)
+
+[node name="EtagereMurale" parent="." unique_id=1982887456 instance=ExtResource("1_7vdoa")]
+transform = Transform3D(0.006608311, -0.33923694, 0, 0.74652684, 0.0030029495, 0, 0, 0, 0.68082076, -0.19935358, 0.62032163, -0.48669976)
+
+[node name="EtagereMurale2" parent="." unique_id=1691068649 instance=ExtResource("1_7vdoa")]
+transform = Transform3D(-0.16890451, 0.0011074531, -6.077876e-08, 0.0014951625, 0.12510602, 5.3802063e-10, 2.5504876e-08, 0, -0.40253532, -0.3748291, -0.49866092, -0.40203822)
+
+[node name="EtagereMurale3" parent="." unique_id=1915857294 instance=ExtResource("1_7vdoa")]
+transform = Transform3D(-0.049634594, 0.0023542016, 4.931564e-09, 0.00043936382, 0.26595244, -4.3654788e-11, 7.49491e-09, 6.0343546e-15, 0.032661557, -0.37081432, -0.39429355, -0.41456997)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1812548675]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=616184614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35421085, 0.4352275, -0.4873352)
+shape = SubResource("BoxShape3D_7vdoa")
