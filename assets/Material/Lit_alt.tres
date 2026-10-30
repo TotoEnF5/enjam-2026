@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8uxbtlvtjn0a"]
+
+[ext_resource type="Texture2D" uid="uid://c50f5scdmx00c" path="res://assets/Models/phonographe_ENJAM.png" id="1_pjf1q"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_pjf1q")
+texture_filter = 0
