@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://oo60lyj8xfxs"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_2hyo3"]
+[ext_resource type="Texture2D" uid="uid://dc3yv8vmuwwe7" path="res://assets/textures/thumbnails/dentier.png" id="1_5pol2"]
+[ext_resource type="PackedScene" uid="uid://cpe77y0v5y2mk" path="res://scenes/placeable_objects/dentier.tscn" id="2_ceuha"]
+
+[resource]
+script = ExtResource("1_2hyo3")
+inventory_image = ExtResource("1_5pol2")
+placeable_object = ExtResource("2_ceuha")
+title = "Dentier de [Prénom]"
+description = "J'ai encore la trace de ses morsures, je cachais son dentier car les gensives font moins mal. Ah...le bon vieux temps..."
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cpe77y0v5y2mk"]
+
+[ext_resource type="PackedScene" uid="uid://df4lem2sno3ya" path="res://assets/Models/Dentier.glb" id="1_64iyv"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_lrbrv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1, 0.61328125, 2.0465088)
+
+[node name="Dentier" type="Node3D" unique_id=934656487]
+script = ExtResource("1_lrbrv")
+
+[node name="Dentier" parent="." unique_id=911312061 instance=ExtResource("1_64iyv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=239682253]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1482993317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19335938, 0.08477783)
+shape = SubResource("BoxShape3D_c6agx")

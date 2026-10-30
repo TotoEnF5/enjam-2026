@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://gtkscqqrukbg"]
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_slx5m"]
-[ext_resource type="Texture2D" uid="uid://dstkccd4shuj7" path="res://assets/textures/thumbnails/clothes.png" id="1_ts6qt"]
+[ext_resource type="Texture2D" uid="uid://c4ts2h6g7xmpn" path="res://assets/textures/thumbnails/ClothesPile.png" id="1_ts6qt"]
 [ext_resource type="PackedScene" uid="uid://dkhavsgtap7g4" path="res://scenes/placeable_objects/clothes.tscn" id="2_02w70"]
 [ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="2_ts6qt"]
 [ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="5_eas3p"]
