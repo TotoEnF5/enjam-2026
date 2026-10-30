@@ -11,7 +11,7 @@ script = ExtResource("1_6kppv")
 inventory_image = ExtResource("1_3wdqe")
 placeable_object = ExtResource("1_p4hbi")
 title = "Axel"
-description = "Dites bonjour à mon potit chat ! [wave amp=20.0 freq=5.0 connected=1]\"Miaou !\"[/wave]"
+description = "Notre compagnon est venu avec ses bagages, incluant un chat plus...normal que le précédent."
 on_etagere = false
 place_audio_streams = ExtResource("2_ts01c")
 yeet_audio_streams = ExtResource("4_k2wug")
