@@ -46,7 +46,15 @@ func _input(event: InputEvent) -> void:
 				_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 10
 			else:
 				if _targeted_snapper != null:
-					if _targeted_snapper.is_poubelle \
+
+
+					if _targeted_snapper.has_object:
+						var mouse_pos = get_viewport().get_mouse_position()
+						var pos = camera.project_ray_origin(mouse_pos)
+						_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 10
+						return
+
+						if _targeted_snapper.is_poubelle \
 					or (_targeted_snapper.is_floor \
 					and _current_object.item.on_floor) \
 					or (_targeted_snapper.is_etagere \
@@ -73,8 +81,12 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if _current_object == null and _targeted_object != null:
 				set_current_object(_targeted_object)
+				_targeted_snapper.has_object = false
 			else:
 				if _targeted_snapper != null:
+
+					if _targeted_snapper.has_object:
+						return
 					if _targeted_snapper.is_poubelle \
 					or (_targeted_snapper.is_floor \
 					and _current_object.item.on_floor) \
@@ -98,6 +110,7 @@ func _input(event: InputEvent) -> void:
 							_current_object.untake()
 							_current_object = null
 							_targeted_snapper = null
+					
 
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if _current_object == null:
