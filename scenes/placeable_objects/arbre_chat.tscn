@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c4ubcxod13q22"]
+
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_4im3t"]
+[ext_resource type="PackedScene" uid="uid://d2rcoo23wn6um" path="res://assets/Models/ArbreàChat.gltf" id="1_jetdr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(3.1694336, 5.7901, 4.113159)
+
+[node name="ArbreChat" type="Node3D" unique_id=550506935]
+script = ExtResource("1_4im3t")
+
+[node name="ArbreàChat" parent="." unique_id=180113362 instance=ExtResource("1_jetdr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.838657)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=132902786]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=250289577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0847168, 2.9224548, -0.06793213)
+shape = SubResource("BoxShape3D_c6agx")

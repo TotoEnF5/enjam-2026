@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://by6k1sv1s3ouy"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_cr7ps"]
+[ext_resource type="Texture2D" uid="uid://cacxvihjkf5j0" path="res://assets/Models/AquariumAvecPoisson.png" id="1_fa1w0"]
+[ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="2_jsyyq"]
+[ext_resource type="PackedScene" uid="uid://deebf20g30w3" path="res://scenes/placeable_objects/cadre.tscn" id="2_mht6k"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="5_sp0j7"]
+
+[resource]
+script = ExtResource("1_cr7ps")
+inventory_image = ExtResource("1_fa1w0")
+placeable_object = ExtResource("2_mht6k")
+title = "Photo de [Prénom]"
+description = "Pour beaucoup, [Prénom] était un visage comme un autre. Pour moi, c'était la plus belle personne que j'ai pu rencontrer."
+on_wall = true
+place_audio_streams = ExtResource("2_jsyyq")
+yeet_audio_streams = ExtResource("5_sp0j7")
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
