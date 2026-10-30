@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dd3c5jw4wq0tx"]
+
+[ext_resource type="Texture2D" uid="uid://c7p8a3egh3p85" path="res://assets/Models/panier avec chat.png" id="1_uenhx"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_uenhx")
+texture_filter = 0
