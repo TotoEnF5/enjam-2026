@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="enjam-2026"
-run/main_scene="uid://bfo16nbywca6i"
+run/main_scene="uid://ds1tl3of3b5we"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
