@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfubn0spvdu7n"]
+
+[ext_resource type="Texture2D" uid="uid://blvfrax57sqha" path="res://assets/Models/Aquarium.png" id="1_77g6j"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_77g6j")
+texture_filter = 0

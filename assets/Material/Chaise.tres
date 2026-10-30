@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1hkm4baivpxy"]
+
+[ext_resource type="Texture2D" uid="uid://dex3y2avs0oy3" path="res://assets/Models/Chaise.png" id="1_lqam4"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_lqam4")
+texture_filter = 0

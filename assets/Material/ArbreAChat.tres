@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cl3lqpqi4xyh6"]
+
+[ext_resource type="Texture2D" uid="uid://cax6wcnbu7dvf" path="res://assets/Models/ArbreàChat.png" id="1_r8uu3"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_r8uu3")
+texture_filter = 0

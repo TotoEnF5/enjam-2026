@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cm377loo2xdqr"]
+
+[ext_resource type="Texture2D" uid="uid://te4ywfingd3o" path="res://assets/Models/Baton.png" id="1_bb17j"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_bb17j")
+texture_filter = 0
