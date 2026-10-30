@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dkhavsgtap7g4"]
+
+[ext_resource type="PackedScene" uid="uid://dun0f5fhkqhcc" path="res://assets/Models/ClothesPile.gltf" id="1_8jmbh"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_lkpbk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1, 1.2733765, 2.173706)
+
+[node name="Clothes" type="Node3D" unique_id=1321478060]
+script = ExtResource("1_lkpbk")
+
+[node name="ClothesPile" parent="." unique_id=475330088 instance=ExtResource("1_8jmbh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1096253, 0, 0.95500576)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1958749244]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=210273453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6004944, 0.13616943)
+shape = SubResource("BoxShape3D_c6agx")
