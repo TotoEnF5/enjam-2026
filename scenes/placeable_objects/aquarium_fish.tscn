@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c3jpj77as7vwi"]
+
+[ext_resource type="PackedScene" uid="uid://4186tnin3yu6" path="res://assets/Models/AquariumAvecPoisson.gltf" id="1_8iwqw"]
+
+[node name="AquariumFish" type="Node3D" unique_id=1915802117]
+
+[node name="AquariumAvecPoisson" parent="." unique_id=1450601294 instance=ExtResource("1_8iwqw")]
