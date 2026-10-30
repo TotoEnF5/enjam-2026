@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dilrguime6ts1"]
 
 [ext_resource type="ArrayMesh" uid="uid://xhrbcyo7rv52" path="res://assets/arraymesh/Armoire.res" id="1_vv2bo"]
-[ext_resource type="ArrayMesh" uid="uid://cp6wpy1p37cij" path="res://assets/arraymesh/Frigo.res" id="2_lvwvs"]
-[ext_resource type="ArrayMesh" uid="uid://cdly8noy2c3qx" path="res://assets/arraymesh/Porte.res" id="3_h7paa"]
-[ext_resource type="ArrayMesh" uid="uid://c6rp4ua1fdj4v" path="res://assets/arraymesh/Lit.res" id="4_drxl3"]
-[ext_resource type="ArrayMesh" uid="uid://g5c0y2t4jpl3" path="res://assets/arraymesh/Fenetre.res" id="5_drxl3"]
+[ext_resource type="ArrayMesh" uid="uid://c44o8q2010hpd" path="res://assets/arraymesh/Frigo.res" id="2_lvwvs"]
+[ext_resource type="ArrayMesh" uid="uid://cr5wiw1xtlog6" path="res://assets/arraymesh/Porte.res" id="3_h7paa"]
+[ext_resource type="ArrayMesh" uid="uid://ct25ux4w1dikk" path="res://assets/arraymesh/Lit.res" id="4_drxl3"]
+[ext_resource type="ArrayMesh" uid="uid://kym7ar5qa14n" path="res://assets/arraymesh/Fenetre.res" id="5_drxl3"]
+[ext_resource type="ArrayMesh" uid="uid://b6lfpk0qhsxmf" path="res://assets/arraymesh/Assiettes.res" id="6_w5qvu"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gq8w2"]
 resource_local_to_scene = true
@@ -67,6 +68,13 @@ lifetime = 10.0
 randomness = 0.75
 process_material = SubResource("ParticleProcessMaterial_gq8w2")
 draw_pass_1 = ExtResource("5_drxl3")
+
+[node name="GPUParticles3D6" type="GPUParticles3D" parent="." unique_id=1812457419]
+amount = 4
+lifetime = 10.0
+randomness = 0.75
+process_material = SubResource("ParticleProcessMaterial_gq8w2")
+draw_pass_1 = ExtResource("6_w5qvu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1163662045]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18.491594, -9.303247)

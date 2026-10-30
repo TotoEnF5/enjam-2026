@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvad3k7uundh2"]
+
+[ext_resource type="Texture2D" uid="uid://dch0kgteclirl" path="res://assets/Models/Canne.png" id="1_mi36m"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_mi36m")
+texture_filter = 0

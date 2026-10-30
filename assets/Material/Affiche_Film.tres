@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://j1ij3kvn3se2"]
+
+[ext_resource type="Texture2D" uid="uid://b2472cg2oe8h7" path="res://assets/Models/AfficheFilm.png" id="1_m8cpv"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_m8cpv")
+texture_filter = 0
