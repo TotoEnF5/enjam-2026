@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://dpf0bngbji51h"]
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_iwt1e"]
-[ext_resource type="Texture2D" uid="uid://cacxvihjkf5j0" path="res://assets/Models/AquariumAvecPoisson.png" id="1_s1tbr"]
+[ext_resource type="Texture2D" uid="uid://imox4rupuqc6" path="res://assets/textures/thumbnails/Aquarium.png" id="1_xrmf0"]
 [ext_resource type="PackedScene" uid="uid://c3jpj77as7vwi" path="res://scenes/placeable_objects/aquarium_fish.tscn" id="2_eawvh"]
 [ext_resource type="AudioStream" uid="uid://cprfajem6wy1q" path="res://resources/place_audio_poisson.tres" id="2_xrmf0"]
 [ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_eawvh"]
 
 [resource]
 script = ExtResource("1_iwt1e")
-inventory_image = ExtResource("1_s1tbr")
+inventory_image = ExtResource("1_xrmf0")
 placeable_object = ExtResource("2_eawvh")
 title = "Aquarium"
 description = "Il est rempli d'algues et fissuré, mais il est au goût de notre poisson : [shake rate=20.0 level=5 connected=1]Buendia[/shake]."

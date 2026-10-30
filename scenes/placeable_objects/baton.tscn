@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dcdho2cvicmbw"]
+
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_12co2"]
+[ext_resource type="PackedScene" uid="uid://comei8gu8ae57" path="res://assets/Models/Baton.gltf" id="1_luq6e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1, 4.8640137, 1)
+
+[node name="Baton" type="Node3D" unique_id=1487315325]
+script = ExtResource("1_12co2")
+
+[node name="Baton" parent="." unique_id=293320978 instance=ExtResource("1_luq6e")]
+transform = Transform3D(0.25656515, -0.966527, 0, 0.966527, 0.25656515, 0, 0, 0, 1, -0.13642925, -0.83369887, 0.9731964)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1945662654]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2011744307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5255127, 0)
+shape = SubResource("BoxShape3D_c6agx")
