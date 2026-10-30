@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://wv5i284mrgyh"]
+
+[ext_resource type="Texture2D" uid="uid://cr4mlc34fkd4p" path="res://assets/Models/Gnome.png" id="1_b2ee0"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_b2ee0")
+texture_filter = 0

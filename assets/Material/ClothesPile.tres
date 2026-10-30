@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cnqqyc22nslbi"]
+
+[ext_resource type="Texture2D" uid="uid://lta53h2n1qf" path="res://assets/Models/ClothesPile.png" id="1_5t138"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_5t138")
+texture_filter = 0

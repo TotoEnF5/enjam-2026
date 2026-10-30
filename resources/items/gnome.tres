@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://bnqmf1imed7nk"]
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_2utm6"]
-[ext_resource type="Texture2D" uid="uid://dsup23oei0cod" path="res://assets/textures/thumbnails/Gnome.png" id="1_hr7w0"]
+[ext_resource type="Texture2D" uid="uid://bf056gii15byr" path="res://assets/textures/thumbnails/Gnome.png" id="1_hr7w0"]
 [ext_resource type="PackedScene" uid="uid://bu4e4fgse383a" path="res://scenes/placeable_objects/gnome.tscn" id="2_6c0vu"]
 
 [resource]

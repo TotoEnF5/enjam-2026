@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bmaafsa8rjjs7"]
+
+[ext_resource type="Texture2D" uid="uid://15tg2e7amth1" path="res://assets/Models/litiere.png" id="1_mhccb"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_mhccb")
+texture_filter = 0

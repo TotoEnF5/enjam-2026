@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfjngpp8ssowo"]
+
+[ext_resource type="Texture2D" uid="uid://dcci104bfu83o" path="res://assets/Models/FishOnTheWall.png" id="1_57f26"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_57f26")
+texture_filter = 0
