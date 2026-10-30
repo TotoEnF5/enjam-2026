@@ -9,6 +9,7 @@ var _gertrude = load("res://assets/audio/Décès Gertrude.ogg")
 
 func _ready() -> void:
 	_audio_player = AudioStreamPlayer.new()
+	_audio_player.volume_db = -15
 	add_child(_audio_player)
 
 
