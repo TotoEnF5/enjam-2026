@@ -53,16 +53,15 @@ func _input(event: InputEvent) -> void:
 						var pos = camera.project_ray_origin(mouse_pos)
 						_current_object.position = pos + camera.project_ray_normal(mouse_pos) * 10
 						return
-
 						if _targeted_snapper.is_poubelle \
-					or (_targeted_snapper.is_floor \
-					and _current_object.item.on_floor) \
-					or (_targeted_snapper.is_etagere \
-					and _current_object.item.on_etagere) \
-					or (_targeted_snapper.is_wall \
-					and _current_object.item.on_wall):
-						_current_object.global_position = _targeted_snapper.global_position
-						_current_object.global_rotation = _targeted_snapper.global_rotation
+						or (_targeted_snapper.is_floor \
+						and _current_object.item.on_floor) \
+						or (_targeted_snapper.is_etagere \
+						and _current_object.item.on_etagere) \
+						or (_targeted_snapper.is_wall \
+						and _current_object.item.on_wall):
+							_current_object.global_position = _targeted_snapper.global_position
+							_current_object.global_rotation = _targeted_snapper.global_rotation
 					else:
 						var mouse_pos = get_viewport().get_mouse_position()
 						var pos = camera.project_ray_origin(mouse_pos)
