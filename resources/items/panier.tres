@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://c7wr4l8jxi7tc"]
 
-[ext_resource type="Texture2D" uid="uid://bejw24p2403cp" path="res://assets/textures/baltrou.jpg" id="1_3wdqe"]
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_6kppv"]
 [ext_resource type="PackedScene" uid="uid://chnj2iwj1225q" path="res://scenes/placeable_objects/panier.tscn" id="1_p4hbi"]
+[ext_resource type="Texture2D" uid="uid://nxi6xbhx1uyy" path="res://assets/textures/thumbnails/panier avec chat.png" id="1_ts01c"]
 [ext_resource type="AudioStream" uid="uid://byxl1he4rejis" path="res://resources/place_audio_chat.tres" id="2_ts01c"]
 [ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_k2wug"]
 
 [resource]
 script = ExtResource("1_6kppv")
-inventory_image = ExtResource("1_3wdqe")
+inventory_image = ExtResource("1_ts01c")
 placeable_object = ExtResource("1_p4hbi")
 title = "Axel"
 description = "Notre compagnon est venu avec ses bagages, incluant un chat plus...normal que le précédent."
