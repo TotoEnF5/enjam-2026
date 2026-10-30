@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://br4t1rncipsar"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_c1nvl"]
+[ext_resource type="Texture2D" uid="uid://15tg2e7amth1" path="res://assets/Models/litiere.png" id="1_ven5n"]
+[ext_resource type="PackedScene" uid="uid://c7jj6061law0j" path="res://scenes/placeable_objects/litiere.tscn" id="2_ae7if"]
+
+[resource]
+script = ExtResource("1_c1nvl")
+inventory_image = ExtResource("1_ven5n")
+placeable_object = ExtResource("2_ae7if")
+title = "Litière de Axel"
+description = "J'avais pas de sable, alors j'ai mis du ciment."
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

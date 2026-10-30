@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dplbjivicbwaq"]
+
+[ext_resource type="PackedScene" uid="uid://ck7iky7ojv1vc" path="res://assets/Models/Plante.gltf" id="1_nh5os"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_t7twc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(2.283142, 3.4379272, 3.246704)
+
+[node name="Plante" type="Node3D" unique_id=683270268]
+script = ExtResource("1_t7twc")
+
+[node name="Plante" parent="." unique_id=1746704662 instance=ExtResource("1_nh5os")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9009161, 0, 1.9918687)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1392358729]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1856324954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19424438, 1.6910706, -0.3834839)
+shape = SubResource("BoxShape3D_c6agx")

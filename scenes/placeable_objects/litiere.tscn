@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c7jj6061law0j"]
+
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_60sl7"]
+[ext_resource type="PackedScene" uid="uid://uo0d8lu6kwhu" path="res://assets/Models/litiere.gltf" id="1_323lt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(3.928955, 0.80914307, 1.9647217)
+
+[node name="Litiere" type="Node3D" unique_id=1090158346]
+script = ExtResource("1_60sl7")
+
+[node name="litiere" parent="." unique_id=1163056120 instance=ExtResource("1_323lt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9918694, 0, 1.0368632)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=395922990]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=255008095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036254883, 0.38656616, 0.054626465)
+shape = SubResource("BoxShape3D_c6agx")

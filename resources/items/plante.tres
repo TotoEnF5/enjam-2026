@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://bwarnav0rcxuv"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_fd3n2"]
+[ext_resource type="Texture2D" uid="uid://bxhipc030w517" path="res://assets/Models/Plante.png" id="1_ja8fc"]
+[ext_resource type="PackedScene" uid="uid://dplbjivicbwaq" path="res://scenes/placeable_objects/plante.tscn" id="2_be15t"]
+
+[resource]
+script = ExtResource("1_fd3n2")
+inventory_image = ExtResource("1_ja8fc")
+placeable_object = ExtResource("2_be15t")
+title = "Plante verte de [Prénom]"
+description = "On a souvent dit que [Prénom] était une bouffée d'oxygène, une présence réconfortante en arrière-plan, qu'il fallait arroser tous les deux jours. Ou alors était-ce la plante, je les confonds encore."
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://cjh4q6fp4f10d"]
+
+[ext_resource type="Texture2D" uid="uid://c0b0avtb7etuh" path="res://assets/Models/Urne.png" id="1_i7skh"]
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_pol8t"]
+[ext_resource type="PackedScene" uid="uid://belkys4l6l2mu" path="res://scenes/placeable_objects/urne.tscn" id="2_dfjgg"]
+
+[resource]
+script = ExtResource("1_pol8t")
+inventory_image = ExtResource("1_i7skh")
+placeable_object = ExtResource("2_dfjgg")
+title = "Urne de [Prénom]"
+description = "[Prénom] était quelqu'un de très important pour moi, il ne me reste plus que ses cendres et ses objets [shake rate=20.0 level=5 connected=1]moches[/shake]."
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
