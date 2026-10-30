@@ -1,18 +1,65 @@
 [gd_scene format=3 uid="uid://beye3r8f266w0"]
 
 [ext_resource type="Script" uid="uid://bai75n0da13v7" path="res://scripts/hud.gd" id="1_ahhtf"]
+[ext_resource type="FontFile" uid="uid://clgryhs50yo87" path="res://assets/Font/Modern Pixels.ttf" id="2_oo0fn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ahhtf"]
-bg_color = Color(0, 0, 0, 0.5019608)
-border_color = Color(0, 0, 0, 0.5019608)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-expand_margin_left = 8.0
-expand_margin_top = 8.0
-expand_margin_right = 8.0
-expand_margin_bottom = 8.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6fi6k"]
+
+[sub_resource type="FontFile" id="FontFile_uo2fv"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hd3ao"]
+
+[sub_resource type="FontFile" id="FontFile_ahhtf"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tmrh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvwki"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2w1r8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q4q5n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5x4w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xkoo8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oo0fn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ysmq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uo2fv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_047uy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5pdws"]
 
 [node name="HUD" type="Control" unique_id=928920586]
 layout_mode = 3
@@ -31,10 +78,13 @@ offset_top = 16.0
 offset_right = 214.0
 offset_bottom = 81.0
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ahhtf")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6fi6k")
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=1161963905]
 layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("FontFile_uo2fv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hd3ao")
 text = "Left click: take an object
 Right click: cancel"
 
@@ -48,6 +98,14 @@ offset_top = 8.0
 offset_right = -8.0
 offset_bottom = 39.0
 grow_horizontal = 0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = SubResource("FontFile_ahhtf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3tmrh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cvwki")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2w1r8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_q4q5n")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m5x4w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xkoo8")
 text = "J'ai fini !"
 
 [node name="PanelContainer2" type="PanelContainer" parent="." unique_id=289342694]
@@ -67,11 +125,15 @@ alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer2/VBoxContainer" unique_id=1059607018]
 layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("2_oo0fn")
 theme_override_font_sizes/normal_font_size = 32
 theme_override_font_sizes/bold_font_size = 32
 theme_override_font_sizes/bold_italics_font_size = 32
 theme_override_font_sizes/italics_font_size = 32
 theme_override_font_sizes/mono_font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oo0fn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ysmq")
 bbcode_enabled = true
 text = "[shake rate=20.0 level=5 connected=1][b]Attention ![/b][/shake]
 Tu vas perdre tous les objets que tu n'as pas placé !
@@ -86,10 +148,24 @@ alignment = 1
 
 [node name="Non" type="Button" parent="PanelContainer2/VBoxContainer/HBoxContainer" unique_id=712716228]
 layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oo0fn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uo2fv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_047uy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5pdws")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ysmq")
 text = "En fait non"
 
 [node name="Oui" type="Button" parent="PanelContainer2/VBoxContainer/HBoxContainer" unique_id=1606044907]
 layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oo0fn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uo2fv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_047uy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5pdws")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5ysmq")
 text = "Oui oui je sais allez hop"
 
 [connection signal="pressed" from="Fini" to="." method="_on_fini_pressed"]
