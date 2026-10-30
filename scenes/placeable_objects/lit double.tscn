@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b5a3wuj6gfl70"]
+
+[ext_resource type="PackedScene" uid="uid://335nsl16k8oe" path="res://assets/Models/Lit.glb" id="1_ihxnx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ks1ul"]
+size = Vector3(7.2556496, 2.8228607, 9.71228)
+
+[node name="LitDouble" type="Node3D" unique_id=2046716347]
+
+[node name="Lit2" parent="." unique_id=253501238 instance=ExtResource("1_ihxnx")]
+transform = Transform3D(1.4669873, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=236159282]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1585643115]
+transform = Transform3D(0.8102848, 0, 0, 0, 0.8102848, 0, 0, 0, 0.8102848, -0.0072452277, 1.1141497, 0.0018891096)
+shape = SubResource("BoxShape3D_ks1ul")

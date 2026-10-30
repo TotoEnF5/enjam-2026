@@ -12,5 +12,6 @@ title = "Affiche de film de [Prénom]"
 description = "En plissant les yeux très fort et en louchant, on croirait presque voir [Prénom] sur l'affiche. Je ne vois pas d'autre raison d'avoir gardé une affiche de ce film..."
 on_floor = false
 on_etagere = false
+on_etagere_petit = false
 on_wall = true
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

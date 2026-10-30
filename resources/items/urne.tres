@@ -12,6 +12,7 @@ inventory_image = ExtResource("1_w8op5")
 placeable_object = ExtResource("2_dfjgg")
 title = "Urne de [Prénom]"
 description = "[Prénom] était quelqu'un de très important pour moi, il ne me reste plus que ses cendres et ses objets [shake rate=20.0 level=5 connected=1]moches[/shake]."
+on_etagere_petit = false
 place_audio_streams = ExtResource("2_w8op5")
 yeet_audio_streams = ExtResource("4_dfjgg")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

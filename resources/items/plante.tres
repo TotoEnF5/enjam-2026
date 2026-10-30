@@ -12,6 +12,7 @@ inventory_image = ExtResource("1_87mtf")
 placeable_object = ExtResource("2_be15t")
 title = "Plante verte de [Prénom]"
 description = "On a souvent dit que [Prénom] était une bouffée d'oxygène, une présence réconfortante en arrière-plan, qu'il fallait arroser tous les deux jours. Ou alors était-ce la plante, je les confonds encore."
+on_etagere_petit = false
 place_audio_streams = ExtResource("2_87mtf")
 yeet_audio_streams = ExtResource("4_be15t")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

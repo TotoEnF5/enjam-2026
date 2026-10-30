@@ -13,6 +13,7 @@ placeable_object = ExtResource("2_cxw44")
 title = "Arbre à chat"
 description = "Y'avait rien d'autre à [color=green]Gamm Vert[/color]."
 on_etagere = false
+on_etagere_petit = false
 place_audio_streams = ExtResource("2_p5370")
 yeet_audio_streams = ExtResource("5_orvuf")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

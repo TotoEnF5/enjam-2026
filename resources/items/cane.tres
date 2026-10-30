@@ -14,6 +14,7 @@ title = "Canne flamboyante de [Prénom]"
 description = "Cet outil de haute qualité était l'arme maitresse de [Prénom] dans sa séduction. Un mouvement de poignet, un décalage du bras, et parfois, une frappe en diagonale haute. De quoi mettre n'importe qui [shake rate=20.0 level=5 connected=1]sens dessus dessous[/shake]."
 on_etagere = false
 on_wall = true
+on_etagere_petit = false
 place_audio_streams = ExtResource("2_0d151")
 yeet_audio_streams = ExtResource("4_0cpao")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"
