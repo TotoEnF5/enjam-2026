@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://gtkscqqrukbg"]
+
+[ext_resource type="Texture2D" uid="uid://bxhipc030w517" path="res://assets/Models/Plante.png" id="1_shd0r"]
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_slx5m"]
+[ext_resource type="PackedScene" uid="uid://dkhavsgtap7g4" path="res://scenes/placeable_objects/clothes.tscn" id="2_02w70"]
+[ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="2_ts6qt"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="5_eas3p"]
+
+[resource]
+script = ExtResource("1_slx5m")
+inventory_image = ExtResource("1_shd0r")
+placeable_object = ExtResource("2_02w70")
+title = "Pile de vêtements"
+description = "À quoi ça sert d'avoir autant de caleçons alors qu'[Pronom] met tous les jours le même ?"
+place_audio_streams = ExtResource("2_ts6qt")
+yeet_audio_streams = ExtResource("5_eas3p")
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

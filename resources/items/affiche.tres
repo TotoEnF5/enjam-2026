@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://p1c82yet53yy"]
+
+[ext_resource type="Texture2D" uid="uid://b2472cg2oe8h7" path="res://assets/Models/AfficheFilm.png" id="1_a01uv"]
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_ouc4n"]
+[ext_resource type="PackedScene" uid="uid://ysjbfw5mc4gc" path="res://scenes/placeable_objects/affiche.tscn" id="2_w4y0e"]
+
+[resource]
+script = ExtResource("1_ouc4n")
+inventory_image = ExtResource("1_a01uv")
+placeable_object = ExtResource("2_w4y0e")
+title = "Affiche de film de [Prénom]"
+description = "En plissant les yeux très fort et en louchant, on croirait presque voir [Prénom] sur l'affiche. Je ne vois pas d'autre raison d'avoir gardé une affiche de ce film..."
+on_floor = false
+on_etagere = false
+on_wall = true
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

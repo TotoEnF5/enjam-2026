@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ysjbfw5mc4gc"]
+
+[ext_resource type="PackedScene" uid="uid://bcwbnrk3xi2c1" path="res://assets/Models/AfficheFilm.gltf" id="1_85umm"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_gv8hg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1, 6.4311523, 4.112549)
+
+[node name="Affiche" type="Node3D" unique_id=1832518717]
+script = ExtResource("1_gv8hg")
+
+[node name="AfficheFilm" parent="." unique_id=246962491 instance=ExtResource("1_85umm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38303447, 2.4191635)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=532892250]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1078218762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1643066, 0.00012207031)
+shape = SubResource("BoxShape3D_c6agx")
