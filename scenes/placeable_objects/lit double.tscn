@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://b5a3wuj6gfl70"]
 
 [ext_resource type="PackedScene" uid="uid://335nsl16k8oe" path="res://assets/Models/Lit.glb" id="1_ihxnx"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_ks1ul"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ks1ul"]
 size = Vector3(7.2556496, 2.8228607, 9.71228)
 
 [node name="LitDouble" type="Node3D" unique_id=2046716347]
+script = ExtResource("1_ks1ul")
 
 [node name="Lit2" parent="." unique_id=253501238 instance=ExtResource("1_ihxnx")]
 transform = Transform3D(1.4669873, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://djtc10hrd1lim"]
 
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_4gics"]
 [ext_resource type="PackedScene" uid="uid://b2ous0in4kvxi" path="res://assets/Models/EtagereMurale.glb" id="1_7vdoa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7vdoa"]
@@ -7,6 +8,7 @@ size = Vector3(0.32097816, 1.8751916, 2.751648)
 
 [node name="Télé" type="Node3D" unique_id=689783748]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15587795, 0.75518095, 0)
+script = ExtResource("1_4gics")
 
 [node name="EtagereMurale" parent="." unique_id=1982887456 instance=ExtResource("1_7vdoa")]
 transform = Transform3D(0.006608311, -0.33923694, 0, 0.74652684, 0.0030029495, 0, 0, 0, 0.68082076, -0.19935358, 0.62032163, -0.48669976)
