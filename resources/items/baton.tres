@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://bqtontanwrtb7"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_7as3k"]
+[ext_resource type="Texture2D" uid="uid://kptku2f6q4i3" path="res://assets/textures/thumbnails/baton.png" id="1_mnlwt"]
+[ext_resource type="PackedScene" uid="uid://dcdho2cvicmbw" path="res://scenes/placeable_objects/baton.tscn" id="2_liqlo"]
+
+[resource]
+script = ExtResource("1_7as3k")
+inventory_image = ExtResource("1_mnlwt")
+placeable_object = ExtResource("2_liqlo")
+title = "Super bâton"
+description = "Un cadeau offert par le chien de la voisine. Axel essaie de me griffer à chaque fois que je veux m'en débarrasser."
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

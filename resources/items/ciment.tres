@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://by68uykk6v8l2"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_bnxv2"]
+[ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="1_djf3l"]
+[ext_resource type="Texture2D" uid="uid://3hk4w6xrcfsx" path="res://assets/textures/thumbnails/ciment.png" id="1_dqv2m"]
+[ext_resource type="PackedScene" uid="uid://dut6tl16vk5pd" path="res://scenes/placeable_objects/ciment.tscn" id="1_vhexi"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_dqv2m"]
+
+[resource]
+script = ExtResource("1_bnxv2")
+inventory_image = ExtResource("1_dqv2m")
+placeable_object = ExtResource("1_vhexi")
+title = "Seau à béton"
+description = "Un seau très utile pour bétonner les pieds des balances et les terrasses. [Pronom] à tout appris de son ami Xavier."
+on_etagere_petit = false
+place_audio_streams = ExtResource("1_djf3l")
+yeet_audio_streams = ExtResource("4_dqv2m")
+metadata/_custom_type_script = "uid://dlva75r2hqvej"
