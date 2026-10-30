@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dkoud2ft1b6ur"]
+
+[ext_resource type="Texture2D" uid="uid://b5m64abvug3ij" path="res://assets/Models/table de chevet.png" id="1_uv87i"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_uv87i")
+texture_filter = 0

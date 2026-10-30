@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1csa0ut668o6"]
+
+[ext_resource type="Texture2D" uid="uid://duxyx1e86to0g" path="res://assets/Models/table.png" id="1_y4d0y"]
+
+[resource]
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_y4d0y")
+texture_filter = 0
