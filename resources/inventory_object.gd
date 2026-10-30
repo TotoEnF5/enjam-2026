@@ -28,6 +28,7 @@ enum Hobby {
 
 @export var on_floor: bool = true
 @export var on_etagere: bool = true
+@export var on_etagere_petit: bool = true
 @export var on_wall: bool = false
 
 @export var place_audio_streams: AudioStreamRandomizer = load("res://resources/place_audio.tres")

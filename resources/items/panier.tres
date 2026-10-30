@@ -13,6 +13,7 @@ placeable_object = ExtResource("1_p4hbi")
 title = "Axel"
 description = "Notre compagnon est venu avec ses bagages, incluant un chat plus...normal que le précédent."
 on_etagere = false
+on_etagere_petit = false
 place_audio_streams = ExtResource("2_ts01c")
 yeet_audio_streams = ExtResource("4_k2wug")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

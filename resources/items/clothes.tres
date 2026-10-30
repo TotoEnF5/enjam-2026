@@ -12,6 +12,7 @@ inventory_image = ExtResource("1_shd0r")
 placeable_object = ExtResource("2_02w70")
 title = "Pile de vêtements"
 description = "Au vu du prix de la vie actuelle...se nourrir ou se vêtir, il va falloir choisir."
+on_etagere_petit = false
 place_audio_streams = ExtResource("2_ts6qt")
 yeet_audio_streams = ExtResource("5_eas3p")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

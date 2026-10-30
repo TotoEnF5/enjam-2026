@@ -138,37 +138,37 @@ is_etagere = true
 [node name="SnapPoint2" parent="Snappers" unique_id=1993417590 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6829305, 5.946265, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint3" parent="Snappers" unique_id=307125639 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7799332, 5.946265, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint4" parent="Snappers" unique_id=515001008 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2320468, 5.946265, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint5" parent="Snappers" unique_id=947757268 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6829305, 3.785262, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint6" parent="Snappers" unique_id=781190702 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7799332, 3.785262, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint7" parent="Snappers" unique_id=134538267 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2320468, 3.785262, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint8" parent="Snappers" unique_id=2028766526 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6829305, 1.9640291, 7.889229)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7354224, 1.9640288, 7.8727627)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint8" parent="Snappers/SnapPoint8" unique_id=532807841 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -1.877471, 5.9721594, 0.0068559647)
@@ -178,12 +178,12 @@ is_etagere = true
 [node name="SnapPoint9" parent="Snappers" unique_id=1188825100 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7799332, 1.9640291, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="SnapPoint10" parent="Snappers" unique_id=976636673 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2320468, 1.9640291, 7.889229)
 is_floor = false
-is_etagere = true
+is_etagere_petit = true
 
 [node name="ObjectMover" parent="." unique_id=1059546158 node_paths=PackedStringArray("inventory", "camera") instance=ExtResource("4_bwc8c")]
 inventory = NodePath("../CanvasLayer/Inventory")
