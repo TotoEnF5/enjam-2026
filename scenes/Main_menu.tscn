@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cvgr1mucyhthv" path="res://scripts/main_menu.gd" id="1_d1rr7"]
 [ext_resource type="Script" uid="uid://bhb82fdvhjsbv" path="res://scripts/button.gd" id="2_d1rr7"]
+[ext_resource type="PackedScene" uid="uid://dilrguime6ts1" path="res://scenes/particle_mm.tscn" id="3_ow2sg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddug4"]
 bg_color = Color(0.7344132, 0.5156983, 0.70600116, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_d1rr7"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
 
 [sub_resource type="Animation" id="Animation_d1rr7"]
 length = 0.001
@@ -80,6 +84,24 @@ grow_vertical = 2
 script = ExtResource("1_d1rr7")
 anim = NodePath("AnimationPlayer")
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1461804788]
+layout_mode = 0
+offset_left = 1710.0
+offset_top = 321.0
+offset_right = 3630.0
+offset_bottom = 1401.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1777868754]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1999223808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29.64127, 0)
+
+[node name="ParticleMm" parent="SubViewportContainer/SubViewport/Camera3D" unique_id=792334127 instance=ExtResource("3_ow2sg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.75167, -19.42607)
+
 [node name="BG" type="Panel" parent="." unique_id=1339957524]
 layout_mode = 1
 anchors_preset = 15
@@ -88,6 +110,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ddug4")
+
+[node name="TextureRect" type="TextureRect" parent="BG" unique_id=1105000136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_d1rr7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1527695874]
 layout_mode = 1

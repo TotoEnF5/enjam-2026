@@ -46,6 +46,17 @@ _subresources={
 "use_external/fallback_path": "res://assets/Material/meubles01.tres",
 "use_external/path": "uid://b8kxfx3n7i0at"
 }
+},
+"meshes": {
+"Frigo_ENJAM_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://assets/arraymesh/Frigo.res",
+"save_to_file/path": "uid://c44o8q2010hpd"
+}
 }
 }
 gltf/naming_version=2
