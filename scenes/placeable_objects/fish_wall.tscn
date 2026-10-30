@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d38r3xmfnqnrp"]
+
+[ext_resource type="PackedScene" uid="uid://6wcrbkhw36rf" path="res://assets/Models/FishOnTheWall.gltf" id="1_1018b"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_hd2bj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1018b"]
+size = Vector3(0.5317383, 1.4555054, 3.7111816)
+
+[node name="FishWall" type="Node3D" unique_id=1298149237]
+script = ExtResource("1_hd2bj")
+
+[node name="FishOnTheWall" parent="." unique_id=642219808 instance=ExtResource("1_1018b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2819541, 1.982774)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=763799674]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=780319665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23413086, 0.7094346, -0.12291622)
+shape = SubResource("BoxShape3D_1018b")

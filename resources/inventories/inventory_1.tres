@@ -6,8 +6,10 @@
 [ext_resource type="Resource" uid="uid://dpf0bngbji51h" path="res://resources/items/aquarium_poisson.tres" id="2_vtdkf"]
 [ext_resource type="Resource" uid="uid://br4t1rncipsar" path="res://resources/items/litiere.tres" id="3_ombf6"]
 [ext_resource type="Resource" uid="uid://b0d80h6s2qrwi" path="res://resources/items/fish.tres" id="4_be7v7"]
+[ext_resource type="Resource" uid="uid://gtkscqqrukbg" path="res://resources/items/clothes.tres" id="6_eerty"]
+[ext_resource type="Resource" uid="uid://p1c82yet53yy" path="res://resources/items/affiche.tres" id="7_ombf6"]
 
 [resource]
 script = ExtResource("2_bl1ic")
-items = Array[ExtResource("1_vuyxs")]([ExtResource("2_eerty"), ExtResource("3_ombf6"), ExtResource("4_be7v7"), ExtResource("2_vtdkf")])
+items = Array[ExtResource("1_vuyxs")]([ExtResource("2_eerty"), ExtResource("3_ombf6"), ExtResource("4_be7v7"), ExtResource("2_vtdkf"), ExtResource("6_eerty"), ExtResource("7_ombf6")])
 metadata/_custom_type_script = "uid://bhgyebr222u8t"

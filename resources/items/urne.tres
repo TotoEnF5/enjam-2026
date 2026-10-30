@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://cjh4q6fp4f10d"]
 
-[ext_resource type="Texture2D" uid="uid://c0b0avtb7etuh" path="res://assets/Models/Urne.png" id="1_i7skh"]
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_pol8t"]
+[ext_resource type="Texture2D" uid="uid://bubd0ngml5ymu" path="res://assets/textures/thumbnails/Urne.png" id="1_w8op5"]
 [ext_resource type="PackedScene" uid="uid://belkys4l6l2mu" path="res://scenes/placeable_objects/urne.tscn" id="2_dfjgg"]
 [ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="2_w8op5"]
 [ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_dfjgg"]
 
 [resource]
 script = ExtResource("1_pol8t")
-inventory_image = ExtResource("1_i7skh")
+inventory_image = ExtResource("1_w8op5")
 placeable_object = ExtResource("2_dfjgg")
 title = "Urne de [Prénom]"
 description = "[Prénom] était quelqu'un de très important pour moi, il ne me reste plus que ses cendres et ses objets [shake rate=20.0 level=5 connected=1]moches[/shake]."

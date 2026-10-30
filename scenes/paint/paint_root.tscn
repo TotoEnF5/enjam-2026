@@ -67,8 +67,9 @@ metadata/_edit_use_custom_anchors = false
 
 [node name="ToolsPanel" type="Panel" parent="." unique_id=25925917]
 layout_mode = 0
+offset_top = 82.0
 offset_right = 350.0
-offset_bottom = 600.0
+offset_bottom = 656.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_npkcn")
 script = ExtResource("2")
 metadata/_edit_layout_mode = 1
@@ -313,9 +314,9 @@ metadata/_edit_use_custom_anchors = false
 [node name="ButtonSave" type="Button" parent="ToolsPanel" unique_id=1228907065]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 550.0
+offset_top = 522.0
 offset_right = 340.0
-offset_bottom = 585.0
+offset_bottom = 557.0
 text = "Continuer"
 metadata/_edit_layout_mode = 0
 metadata/_edit_use_custom_anchors = false
@@ -332,15 +333,15 @@ metadata/_edit_use_custom_anchors = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=410958616]
 layout_mode = 0
-offset_left = 414.0
-offset_top = 14.0
-offset_right = 1287.0
-offset_bottom = 91.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+offset_left = 4.0
+offset_top = -10.0
+offset_right = 394.0
+offset_bottom = 67.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 64
 theme_override_font_sizes/bold_font_size = 64
 theme_override_font_sizes/bold_italics_font_size = 64
 theme_override_font_sizes/italics_font_size = 64
 theme_override_font_sizes/mono_font_size = 64
 bbcode_enabled = true
-text = "[wave amp=50.0 freq=5.0 connected=1]Dessine toi !!![/wave]"
+text = "[wave amp=50.0 freq=5.0 connected=1]Dessine toi ![/wave]"

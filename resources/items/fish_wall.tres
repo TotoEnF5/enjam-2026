@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://bvl17p0u0bsku"]
+
+[ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_5u27f"]
+[ext_resource type="Texture2D" uid="uid://bupwsgdth212c" path="res://assets/textures/thumbnails/Fish on the wall.png" id="1_hx665"]
+[ext_resource type="PackedScene" uid="uid://d38r3xmfnqnrp" path="res://scenes/placeable_objects/fish_wall.tscn" id="2_p1s3m"]
+
+[resource]
+script = ExtResource("1_5u27f")
+inventory_image = ExtResource("1_hx665")
+placeable_object = ExtResource("2_p1s3m")
+title = "Trophée de pêche de [Prénom]"
+description = "[Prénom] m'avait raconté.e tant d'histoires. Sa pêche au gros dans la mare de Vindiou, son combat contre le crocodile d'Aldi, sa lutte acharnée contre le kraken de la salle de bain. Je pense que [Prénom] avait un problème de poisson."
+on_floor = false
+on_etagere = false
+on_wall = true
+metadata/_custom_type_script = "uid://dlva75r2hqvej"

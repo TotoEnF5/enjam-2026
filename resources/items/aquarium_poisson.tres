@@ -10,7 +10,7 @@
 script = ExtResource("1_iwt1e")
 inventory_image = ExtResource("1_s1tbr")
 placeable_object = ExtResource("2_eawvh")
-title = "AQUATIUM_POISSON"
+title = "Aquarium"
 description = "Il est rempli d'algues et fissuré, mais il est au goût de notre poisson : [shake rate=20.0 level=5 connected=1]Buendia[/shake]."
 on_floor = false
 on_etagere = false
