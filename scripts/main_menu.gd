@@ -1,5 +1,6 @@
 extends Control
 @export var anim : AnimationPlayer
+@export var anim2 : AnimationPlayer
 
 var cred : bool = false
 var t_haut : bool = false
@@ -17,10 +18,10 @@ func _on_button_play_pressed() -> void:
 
 func _on_button_credits_pressed() -> void:
 	if cred == false :
-		anim.play("Spawn_credits")
+		anim2.play("Spawn_credits")
 		cred = true
 	elif cred == true :
-		anim.play_backwards("Spawn_credits")
+		anim2.play_backwards("Spawn_credits")
 		cred = false
 	pass # Replace with function body.
 
@@ -51,20 +52,28 @@ func _on_button_play_mouse_exited() -> void:
 
 
 func _on_button_credits_mouse_entered() -> void:
-	anim.play("tiroir_mid")
+	if t_mid == false :
+		anim.play("tiroir_mid")
+		t_mid = true
 	pass # Replace with function body.
 
 
 func _on_button_credits_mouse_exited() -> void:
-	anim.play_backwards("tiroir_mid")
+	if t_mid == true :
+		anim.play_backwards("tiroir_mid")
+		t_mid = false
 	pass # Replace with function body.
 
 
 func _on_button_quit_mouse_entered() -> void:
-	anim.play("tiroir_bas")
+	if t_bas == false :
+		anim.play("tiroir_bas")
+		t_bas = true
 	pass # Replace with function body.
 
 
 func _on_button_quit_mouse_exited() -> void:
-	anim.play_backwards("tiroir_bas")
+	if t_bas == true :
+		anim.play_backwards("tiroir_bas")
+		t_bas = false
 	pass # Replace with function body.

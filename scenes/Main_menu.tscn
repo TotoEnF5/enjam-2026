@@ -400,7 +400,7 @@ bg_color = Color(0.2500172, 0.219131, 0.30773312, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpbep"]
 
-[node name="MainMenu" type="Control" unique_id=1801828032 node_paths=PackedStringArray("anim")]
+[node name="MainMenu" type="Control" unique_id=1801828032 node_paths=PackedStringArray("anim", "anim2")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -410,6 +410,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_d1rr7")
 anim = NodePath("AnimationPlayer")
+anim2 = NodePath("AnimationPlayer2")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1461804788]
 layout_mode = 0
@@ -506,6 +507,9 @@ text = "QUITTER"
 script = ExtResource("2_d1rr7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1001990930]
+libraries/ = SubResource("AnimationLibrary_qtdab")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=1663210394]
 libraries/ = SubResource("AnimationLibrary_qtdab")
 
 [node name="Credits" type="Panel" parent="." unique_id=1132605474]
