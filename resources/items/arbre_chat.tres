@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryObject" format=3 uid="uid://crbwpn7rtbipm"]
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_6ycq4"]
-[ext_resource type="Texture2D" uid="uid://5p7vke5xdq0v" path="res://assets/textures/thumbnails/arbre.png" id="1_p5370"]
+[ext_resource type="Texture2D" uid="uid://bjvjced007o6l" path="res://assets/textures/thumbnails/Arbre à chat.png" id="1_p5370"]
 [ext_resource type="PackedScene" uid="uid://c4ubcxod13q22" path="res://scenes/placeable_objects/arbre_chat.tscn" id="2_cxw44"]
 [ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="2_p5370"]
 [ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="5_orvuf"]
