@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dch0kgteclirl" path="res://assets/Models/Canne.png" id="1_0d0gj"]
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_6qwac"]
 [ext_resource type="PackedScene" uid="uid://cntjke13eu5w" path="res://scenes/placeable_objects/cane.tscn" id="2_0cpao"]
+[ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="2_0d151"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_0cpao"]
 
 [resource]
 script = ExtResource("1_6qwac")
@@ -10,4 +12,6 @@ inventory_image = ExtResource("1_0d0gj")
 placeable_object = ExtResource("2_0cpao")
 title = "Canne flamboyante de [Prénom]"
 description = "Cet outil de haute qualité était l'arme maitresse de [Prénom] dans sa séduction. Un mouvement de poignet, un décalage du bras, et parfois, une [shake rate=20.0 level=5 connected=1]frappe en diagonale haute[/shake]. De quoi mettre n'importe qui sens dessus dessous."
+place_audio_streams = ExtResource("2_0d151")
+yeet_audio_streams = ExtResource("4_0cpao")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

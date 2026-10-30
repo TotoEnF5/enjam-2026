@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cprfajem6wy1q"]
+
+[ext_resource type="AudioStream" uid="uid://1d4u0uxd3tup" path="res://assets/audio/sfx/Poisson-01.wav" id="1_8hkl5"]
+[ext_resource type="AudioStream" uid="uid://cmyuioqii7w41" path="res://assets/audio/sfx/Poisson-02.wav" id="2_kvutu"]
+[ext_resource type="AudioStream" uid="uid://c1nlvy3bneju5" path="res://assets/audio/sfx/Poisson-03.wav" id="3_kavrt"]
+
+[resource]
+random_pitch = 1.2599211
+streams_count = 3
+stream_0/stream = ExtResource("1_8hkl5")
+stream_1/stream = ExtResource("2_kvutu")
+stream_2/stream = ExtResource("3_kavrt")

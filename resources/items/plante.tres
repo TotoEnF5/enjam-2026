@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_fd3n2"]
 [ext_resource type="Texture2D" uid="uid://bxhipc030w517" path="res://assets/Models/Plante.png" id="1_ja8fc"]
+[ext_resource type="AudioStream" uid="uid://ch83yivrn4m1d" path="res://resources/place_audio.tres" id="2_87mtf"]
 [ext_resource type="PackedScene" uid="uid://dplbjivicbwaq" path="res://scenes/placeable_objects/plante.tscn" id="2_be15t"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_be15t"]
 
 [resource]
 script = ExtResource("1_fd3n2")
@@ -10,4 +12,6 @@ inventory_image = ExtResource("1_ja8fc")
 placeable_object = ExtResource("2_be15t")
 title = "Plante verte de [Prénom]"
 description = "On a souvent dit que [Prénom] était une bouffée d'oxygène, une présence réconfortante en arrière-plan, qu'il fallait arroser tous les deux jours. Ou alors était-ce la plante, je les confonds encore."
+place_audio_streams = ExtResource("2_87mtf")
+yeet_audio_streams = ExtResource("4_be15t")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

@@ -21,7 +21,7 @@ enum Hobby {
 @export var hobby: Hobby
 @export var title: String:
 	set(value):
-		title = "[b]" + value + "[/b]"
+		title = _replace_desc("[b]" + value + "[/b]")
 @export_multiline var description: String:
 	set(value):
 		description = _replace_desc(value)
@@ -30,11 +30,14 @@ enum Hobby {
 @export var on_etagere: bool = true
 @export var on_wall: bool = false
 
+@export var place_audio_streams: AudioStreamRandomizer = load("res://resources/place_audio.tres")
+@export var yeet_audio_streams: AudioStreamRandomizer = load("res://resources/yeet_audio.tres")
+
 
 func _init(texture: Texture2D = null, object: PackedScene = null, _title: String = "Title", _description: String = "Description") -> void:
 	inventory_image = texture
 	placeable_object = object
-	title = _title
+	title = _replace_desc(_title)
 	description = _replace_desc(_description)
 	
 

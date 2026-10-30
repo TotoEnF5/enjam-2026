@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cg18yf43wahix"
+path="res://.godot/imported/Objet bien placé non naturel-3.ogg-1853b25dfe6d4be65e52aca6b5225943.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/Objet bien placé non naturel-3.ogg"
+dest_files=["res://.godot/imported/Objet bien placé non naturel-3.ogg-1853b25dfe6d4be65e52aca6b5225943.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dlva75r2hqvej" path="res://resources/inventory_object.gd" id="1_ln28y"]
 [ext_resource type="Texture2D" uid="uid://dryywuwbsqyer" path="res://assets/textures/moo.jpg" id="1_poo8i"]
+[ext_resource type="AudioStream" uid="uid://cprfajem6wy1q" path="res://resources/place_audio_poisson.tres" id="2_3xc2o"]
 [ext_resource type="PackedScene" uid="uid://d28be6x15arla" path="res://scenes/placeable_objects/fish.tscn" id="2_nd0o1"]
+[ext_resource type="AudioStream" uid="uid://bsupge02tb6ug" path="res://resources/yeet_audio.tres" id="4_nd0o1"]
 
 [resource]
 script = ExtResource("1_ln28y")
@@ -10,4 +12,6 @@ inventory_image = ExtResource("1_poo8i")
 placeable_object = ExtResource("2_nd0o1")
 title = "Buendia"
 description = "Axel passe son temps à essayer de le [shake rate=20.0 level=5 connected=1]croquer[/shake]. Heureusement qu'il a son [wave amp=20.0 freq=5.0 connected=1]aquarium[/wave]."
+place_audio_streams = ExtResource("2_3xc2o")
+yeet_audio_streams = ExtResource("4_nd0o1")
 metadata/_custom_type_script = "uid://dlva75r2hqvej"
