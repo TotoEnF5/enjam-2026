@@ -12,5 +12,6 @@ title = "Trophée de pêche de [Prénom]"
 description = "[Prénom] m'avait raconté.e tant d'histoires. Sa pêche au gros dans la mare de Vindiou, son combat contre le crocodile d'Aldi, sa lutte acharnée contre le kraken de la salle de bain. Je pense que [Prénom] avait un problème de poisson."
 on_floor = false
 on_etagere = false
+on_etagere_petit = false
 on_wall = true
 metadata/_custom_type_script = "uid://dlva75r2hqvej"

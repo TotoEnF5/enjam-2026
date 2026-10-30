@@ -30,8 +30,8 @@ script = ExtResource("1_ptc3g")
 inventories = Array[ExtResource("2_wcu0q")]([ExtResource("3_bwc8c"), ExtResource("4_mhx8p")])
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1908228732]
-transform = Transform3D(-0.70710677, -0.25915548, 0.65790457, 0, 0.9304176, 0.3665012, -0.70710677, 0.25915548, -0.65790457, 14.69, 11.006, -16.331)
-fov = 40.0
+transform = Transform3D(-0.7248888, -0.2524702, 0.640933, 0, 0.9304176, 0.3665012, -0.68886596, 0.2656726, -0.6744493, 13.6769285, 11.977143, -16.477737)
+fov = 47.3
 
 [node name="House" type="Node3D" parent="." unique_id=188685545]
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, 4.7683716e-07, 2.3841858e-07, 4.7683716e-07)
@@ -125,28 +125,28 @@ transform = Transform3D(2.0729814, 0, -0.33487028, 0, 1, 0, 0.7367146, 0, 0.9422
 is_floor = false
 is_etagere = true
 
+[node name="SnapPoint29" parent="Snappers" unique_id=122305157 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.95288455, 0, -0.30333573, 0, 1, 0, 0.30333573, 0, 0.95288455, -9.493822, 10.170792, 3.2832851)
+is_floor = false
+is_wall = true
+
+[node name="SnapPoint25" parent="Snappers" unique_id=1397095543 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.99085957, 0, -0.13490263, 0, 1, 0, 0.13490263, 0, 0.99085957, -2.93958, 10.06735, 8.469463)
+is_floor = false
+is_wall = true
+
+[node name="SnapPoint22" parent="Snappers" unique_id=533618146 instance=ExtResource("3_wcu0q")]
+transform = Transform3D(0.9958719, 0, 0.09077492, 0, 1, 0, -0.09077492, 0, 0.9958719, 6.230008, 9.963909, 8.493095)
+is_floor = false
+is_wall = true
+
 [node name="SnapPoint21" parent="Snappers" unique_id=1023694979 instance=ExtResource("3_wcu0q")]
 transform = Transform3D(0.9673693, 0, -0.25337055, 0, 1, 0, 0.25337055, 0, 0.9673693, 1.0435736, 3.220409, -0.7886205)
 is_floor = false
 is_etagere = true
 
-[node name="SnapPoint21" parent="Snappers/SnapPoint21" unique_id=533618146 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.96736956, 0, -0.2533706, 0, 1, 0, 0.2533706, 0, 0.96736956, 7.3689113, 7.1368775, 7.664757)
-is_floor = false
-is_wall = true
-
-[node name="SnapPoint21" parent="Snappers/SnapPoint21/SnapPoint21" unique_id=1397095543 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.96736956, 0, -0.2533706, 0, 1, 0, 0.2533706, 0, 0.96736956, -7.787327, 0.10344124, 4.841421)
-is_floor = false
-is_wall = true
-
-[node name="SnapPoint21" parent="Snappers/SnapPoint21/SnapPoint21/SnapPoint21" unique_id=122305157 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.9673695, 0, -0.25337058, 0, 1, 0, 0.25337058, 0, 0.9673695, -8.269497, 0.10344124, 1.2123775)
-is_floor = false
-is_wall = true
-
 [node name="SnapPoint19" parent="Snappers" unique_id=1183209974 instance=ExtResource("3_wcu0q")]
-transform = Transform3D(0.4918564, 0, -0.87067634, 0, 1, 0, 0.87067634, 0, 0.4918564, -8.885092, 8.05642, -6.6469254)
+transform = Transform3D(0.9922675, 0, -0.12411755, 0, 1, 0, 0.12411755, 0, 0.9922675, -8.885092, 8.05642, -6.6469254)
 is_floor = false
 is_etagere = true
 
