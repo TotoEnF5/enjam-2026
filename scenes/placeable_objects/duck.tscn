@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cmpqhmbcibdc2"]
+
+[ext_resource type="PackedScene" uid="uid://cqjqafsyne6c2" path="res://assets/Models/Rubber duck.gltf" id="1_i8wnl"]
+[ext_resource type="Script" uid="uid://jylvbhg5b6k0" path="res://scripts/placeable_object.gd" id="1_jwrvi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6agx"]
+size = Vector3(1, 1.0278931, 1.4335938)
+
+[node name="Duck" type="Node3D" unique_id=550888179]
+script = ExtResource("1_jwrvi")
+
+[node name="Rubber duck" parent="." unique_id=798787747 instance=ExtResource("1_i8wnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9054866, 0, 0.914919)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=741847761]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=259749547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48519897, 0.03515625)
+shape = SubResource("BoxShape3D_c6agx")
