@@ -46,6 +46,17 @@ _subresources={
 "use_external/fallback_path": "res://assets/Material/Meubles_2.tres",
 "use_external/path": "uid://bwcqnmc1pvsw7"
 }
+},
+"meshes": {
+"Trophee_Mesh_126": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://assets/arraymesh/Trophee.res",
+"save_to_file/path": "uid://c2mrhotw5cnj1"
+}
 }
 }
 gltf/naming_version=2
