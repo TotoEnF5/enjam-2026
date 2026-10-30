@@ -27,7 +27,7 @@ func _go_to_next_iteration() -> void:
 
 		_current_iteration += 1
 		if _current_iteration > 1:
-			get_tree().change_scene_to_file("res://scripts/fin.tscn")
+			get_tree().change_scene_to_file("res://scenes/fin.tscn")
 			return
 
 		_inventory.clear()
